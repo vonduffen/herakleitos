@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HERAKLEITOS — STUDENT CONSOLE</title>
+<style>
+  :root{
+    --paper:#e7e3d9; --panel:#ded9cc; --ink:#141310; --ink-soft:#524d43;
+    --line:#141310; --ember:#c8371f; --on-ember:#f4f1ea;
+    --hair:rgba(20,19,16,.28);
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --grot:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --paper:#100f0c; --panel:#181712; --ink:#e9e5d9; --ink-soft:#9a9184;
+      --line:#3b3830; --ember:#e85a34; --on-ember:#100f0c;
+      --hair:rgba(233,229,217,.22); }
+  }
+  :root[data-theme="light"]{ --paper:#e7e3d9; --panel:#ded9cc; --ink:#141310;
+    --ink-soft:#524d43; --line:#141310; --ember:#c8371f; --on-ember:#f4f1ea;
+    --hair:rgba(20,19,16,.28); }
+  :root[data-theme="dark"]{ --paper:#100f0c; --panel:#181712; --ink:#e9e5d9;
+    --ink-soft:#9a9184; --line:#3b3830; --ember:#e85a34; --on-ember:#100f0c;
+    --hair:rgba(233,229,217,.22); }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--grot);
+    display:flex; flex-direction:column;}
+  ::selection{background:var(--ember); color:var(--on-ember);}
+
+  header{border-bottom:3px solid var(--line); padding:10px clamp(12px,3vw,26px);
+    display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;}
+  header h1{margin:0; font-size:clamp(1.1rem,3vw,1.6rem); font-weight:800;
+    letter-spacing:-.02em; text-transform:uppercase;}
+  header h1 b{color:var(--ember);}
+  .meta{font-family:var(--mono); font-size:.64rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-soft); margin-left:auto;
+    display:flex; gap:14px; align-items:center;}
+  .dot{display:inline-block; width:8px; height:8px; background:var(--ink-soft);}
+  .dot--up{background:var(--ember);}
+
+  main{flex:1; overflow-y:auto; padding:18px clamp(12px,3vw,26px);}
+  .feed{max-width:860px; margin:0 auto; display:flex; flex-direction:column; gap:14px;}
+
+  .msg{border:2px solid var(--line); max-width:92%;}
+  .msg__tag{font-family:var(--mono); font-size:.6rem; font-weight:700;
+    letter-spacing:.14em; text-transform:uppercase; padding:4px 10px;
+    border-bottom:1px solid var(--hair); display:flex; justify-content:space-between; gap:10px;}
+  .msg__body{padding:10px 12px; line-height:1.45; white-space:pre-wrap;
+    font-size:.98rem; overflow-wrap:break-word;}
+  .msg--user{align-self:flex-end; background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .msg--user .msg__tag{color:var(--ember); border-color:rgba(255,255,255,.2);}
+  .msg--model{align-self:flex-start; background:var(--panel);}
+  .msg--model .msg__tag{color:var(--ember);}
+  .msg--model.thinking .msg__body::after{content:"▮"; color:var(--ember);
+    animation:blink .8s steps(1) infinite;}
+  @keyframes blink{50%{opacity:0}}
+  @media (prefers-reduced-motion:reduce){ .msg--model.thinking .msg__body::after{animation:none;} }
+  .msg__stats{font-weight:400; color:var(--ink-soft); letter-spacing:.06em;}
+
+  .hello{border:2px dashed var(--line); padding:14px 16px; font-size:.92rem;
+    color:var(--ink-soft); max-width:66ch;}
+  .hello b{color:var(--ink);}
+
+  .presets{max-width:860px; margin:14px auto 0; display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{font-family:var(--mono); font-size:.66rem; letter-spacing:.06em;
+    text-transform:uppercase; border:1.5px solid var(--line); background:transparent;
+    color:var(--ink); padding:6px 10px; cursor:pointer; text-align:left;}
+  .chip:hover{background:var(--ember); color:var(--on-ember); border-color:var(--ember);}
+  .chip:focus-visible{outline:3px solid var(--ember); outline-offset:2px;}
+
+  footer{border-top:3px solid var(--line); padding:12px clamp(12px,3vw,26px);}
+  .bar{max-width:860px; margin:0 auto; display:flex; gap:10px; align-items:flex-end;}
+  textarea{flex:1; resize:none; background:var(--panel); color:var(--ink);
+    border:2px solid var(--line); font-family:var(--grot); font-size:1rem;
+    padding:10px 12px; min-height:52px; max-height:160px; line-height:1.4;}
+  textarea:focus-visible{outline:3px solid var(--ember); outline-offset:1px;}
+  .send{font-family:var(--mono); font-weight:700; letter-spacing:.1em;
+    text-transform:uppercase; font-size:.78rem; background:var(--ember);
+    color:var(--on-ember); border:2px solid var(--ember); padding:14px 20px; cursor:pointer;}
+  .send:disabled{background:var(--panel); color:var(--ink-soft); border-color:var(--hair); cursor:default;}
+  .send:not(:disabled):hover{background:var(--ink); border-color:var(--ink); color:var(--paper);}
+  .send:focus-visible{outline:3px solid var(--ink); outline-offset:2px;}
+  .ctl{display:flex; flex-direction:column; gap:4px; font-family:var(--mono);
+    font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft);}
+  .ctl input[type=range]{width:110px; accent-color:var(--ember);}
+  .rowbtns{display:flex; gap:8px; margin-top:8px; max-width:860px; margin-inline:auto;}
+  .ghost{font-family:var(--mono); font-size:.62rem; letter-spacing:.1em;
+    text-transform:uppercase; background:transparent; color:var(--ink-soft);
+    border:1.5px solid var(--hair); padding:4px 10px; cursor:pointer;}
+  .ghost:hover{border-color:var(--ember); color:var(--ember);}
+</style>
+</head>
+<body>
+<header>
+  <h1>Herakleitos — <b>Student Console</b></h1>
+  <div class="meta">
+    <span>QWEN3-1.7B · LoRA <b>poc2</b> · LOCAL</span>
+    <span id="status"><span class="dot" id="statusDot"></span> CHECKING</span>
+    <button class="ghost" id="themeBtn" type="button">THEME</button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="feed" id="feed">
+    <div class="hello">
+      <b>This is the round-2 student</b> — a 1.7B model LoRA-trained on 255
+      eval-gated examples, running entirely on this machine. It was trained to
+      reason in processes, exchanges, and held tensions — and to never quote
+      rivers at you. Ask it about anything that changes: a codebase, a marriage,
+      a city, a habit. Or press a preset below.
+    </div>
+    <div class="presets" id="presets"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="bar">
+    <div class="ctl">
+      <label for="temp">TEMP <span id="tempVal">0.7</span></label>
+      <input type="range" id="temp" min="0" max="1.2" step="0.1" value="0.7">
+    </div>
+    <textarea id="input" placeholder="Ask the student…" rows="2"></textarea>
+    <button class="send" id="send" type="button">Send</button>
+  </div>
+  <div class="rowbtns">
+    <button class="ghost" id="clear" type="button">Clear conversation</button>
+  </div>
+</footer>
+
+<script>
+  const PRESETS = [
+    "Is a sourdough starter kept for 90 years the same starter?",
+    "My team rewrote our app three times. Was anything constant?",
+    "Are you the same person you were at seven years old?",
+    "A skeptic says stability and change are simple opposites. Respond.",
+    "What holds a friendship together when both people keep changing?",
+    "Compress into two sentences: why a paused hobby isn't a dead one.",
+  ];
+  const feed = document.getElementById("feed");
+  const main = document.getElementById("main");
+  const input = document.getElementById("input");
+  const send = document.getElementById("send");
+  const temp = document.getElementById("temp");
+  const tempVal = document.getElementById("tempVal");
+  const history = [];
+  let busy = false;
+
+  // presets
+  const presetBox = document.getElementById("presets");
+  PRESETS.forEach(p => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.textContent = p;
+    b.addEventListener("click", () => { input.value = p; input.focus(); });
+    presetBox.appendChild(b);
+  });
+
+  temp.addEventListener("input", () => tempVal.textContent = temp.value);
+
+  // theme toggle: auto -> light -> dark
+  const order = ["auto","light","dark"]; let ti = 0;
+  document.getElementById("themeBtn").addEventListener("click", () => {
+    ti = (ti+1) % order.length;
+    const m = order[ti], root = document.documentElement;
+    if (m === "auto") root.removeAttribute("data-theme");
+    else root.setAttribute("data-theme", m);
+    document.getElementById("themeBtn").textContent = "THEME: " + m.toUpperCase();
+  });
+
+  document.getElementById("clear").addEventListener("click", () => {
+    history.length = 0;
+    feed.querySelectorAll(".msg").forEach(el => el.remove());
+    input.focus();
+  });
+
+  // health
+  fetch("/api/health").then(r => r.json()).then(h => {
+    document.getElementById("statusDot").className = "dot" + (h.model_up ? " dot--up" : "");
+    document.getElementById("status").lastChild.textContent = h.model_up ? " MODEL UP" : " MODEL DOWN";
+  }).catch(() => {});
+
+  function addMsg(role, text) {
+    const el = document.createElement("div");
+    el.className = "msg msg--" + (role === "user" ? "user" : "model");
+    el.innerHTML = '<div class="msg__tag"><span>' +
+      (role === "user" ? "YOU" : "STUDENT") +
+      '</span><span class="msg__stats"></span></div><div class="msg__body"></div>';
+    el.querySelector(".msg__body").textContent = text;
+    feed.appendChild(el);
+    main.scrollTop = main.scrollHeight;
+    return el;
+  }
+
+  async function ask() {
+    const q = input.value.trim();
+    if (!q || busy) return;
+    busy = true; send.disabled = true; input.value = "";
+    addMsg("user", q);
+    history.push({role:"user", content:q});
+    const el = addMsg("model", "");
+    el.classList.add("thinking");
+    const body = el.querySelector(".msg__body");
+    const stats = el.querySelector(".msg__stats");
+    const t0 = performance.now();
+    let text = "";
+    try {
+      const resp = await fetch("/api/chat", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({messages: history, temperature: parseFloat(temp.value)})
+      });
+      const reader = resp.body.getReader();
+      const dec = new TextDecoder();
+      let buf = "";
+      for (;;) {
+        const {done, value} = await reader.read();
+        if (done) break;
+        buf += dec.decode(value, {stream:true});
+        const lines = buf.split("\n"); buf = lines.pop();
+        for (const line of lines) {
+          if (!line.startsWith("data:")) continue;
+          const payload = line.slice(5).trim();
+          if (payload === "[DONE]") continue;
+          try {
+            const delta = JSON.parse(payload).choices?.[0]?.delta?.content;
+            if (delta) {
+              text += delta;
+              body.textContent = text.replace(/<think>[\s\S]*?(<\/think>|$)/g, "").trimStart();
+              main.scrollTop = main.scrollHeight;
+            }
+          } catch {}
+        }
+      }
+      const dt = (performance.now() - t0) / 1000;
+      const words = body.textContent.split(/\s+/).filter(Boolean).length;
+      stats.textContent = dt.toFixed(1) + "s · " + words + "w";
+      history.push({role:"assistant", content: body.textContent});
+    } catch (e) {
+      body.textContent = "[error: " + e.message + " — is the model server up?]";
+    } finally {
+      el.classList.remove("thinking");
+      busy = false; send.disabled = false; input.focus();
+    }
+  }
+
+  send.addEventListener("click", ask);
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask(); }
+  });
+  input.focus();
+</script>
+</body>
+</html>
