@@ -241,12 +241,17 @@ WORKING_TRANSLATOR = "Herakleitos project (working translation, MIT)"
 
 
 def _clean_html(s: str) -> str:
+    s = re.sub(r"<style[^>]*>.*?</style>", "", s, flags=re.S)  # inline CSS blocks
     s = re.sub(r"<span[^>]*class=\"[^\"]*pagenum[^\"]*\"[^>]*>.*?</span>", "", s, flags=re.S)
     s = re.sub(r"<sup[^>]*class=\"reference\"[^>]*>.*?</sup>", "", s, flags=re.S)
     s = re.sub(r"<span class=\"mw-editsection\">.*?</span></span>", "", s, flags=re.S)
     s = re.sub(r"<br\s*/?>", "\n", s)
     s = re.sub(r"<[^>]+>", "", s)
     s = html.unescape(s)
+    # Strip leftover CSS rule fragments (e.g. ".mw-parser-output ...{...}") that
+    # can survive if the source embeds an unclosed or malformed <style> block.
+    # Bounded selector/body char classes keep this linear (no nested quantifiers).
+    s = re.sub(r"\.mw-parser-output[^{}\n]{0,300}\{[^{}]{0,300}\}", "", s)
     s = s.replace("​", "").replace(" ", " ")
     s = re.sub(r"R\.\s*P\.\s*\d+\s*[a-z]?\.?", "", s)
     s = re.sub(r"[ \t]+", " ", s)
@@ -529,23 +534,40 @@ def _gutenberg_paragraphs(path: Path) -> list[str]:
 def build_quoting_passages(
     path: Path, category: str, author: str, source: str, pattern: str, limit: int
 ) -> list[dict]:
+    """Harvest passages that actually engage Heraclitus.
+
+    The text stored is a window CENTERED on the match, not the paragraph's first
+    N chars - otherwise a long introductory paragraph whose Heraclitus mention
+    sits deep inside gets truncated to generic scholarly boilerplate that is not
+    about Heraclitus at all (a real bug the eval pre-flight caught).
+    """
     paras = _gutenberg_paragraphs(path)
     out = []
     for p in paras:
-        if re.search(pattern, p) and len(p) > 150:
-            out.append(
-                {
-                    "id": f"{category}-{Path(path).stem}-{len(out) + 1}",
-                    "category": category,
-                    "language": "en",
-                    "text": p[:2500],
-                    "author": author,
-                    "source": source,
-                    "notes": "Contrast corpus: later discussion/paraphrase of Heraclitus.",
-                }
-            )
-            if len(out) >= limit:
-                break
+        m = re.search(pattern, p)
+        if not m or len(p) <= 150:
+            continue
+        start = max(0, m.start() - 250)
+        end = min(len(p), m.start() + 400)
+        window = p[start:end].strip()
+        if start > 0:
+            window = "... " + window
+        # the stored window must still contain the Heraclitus/flux hook
+        if not re.search(pattern, window):
+            continue
+        out.append(
+            {
+                "id": f"{category}-{Path(path).stem}-{len(out) + 1}",
+                "category": category,
+                "language": "en",
+                "text": window,
+                "author": author,
+                "source": source,
+                "notes": "Contrast corpus: later discussion/paraphrase of Heraclitus.",
+            }
+        )
+        if len(out) >= limit:
+            break
     return out
 
 
@@ -557,16 +579,16 @@ def build_contrast() -> list[dict]:
         "platonic",
         "Plato, Cratylus (tr. Jowett)",
         "Project Gutenberg #1616",
-        r"Heracl[ei]itus|Heracleitean|flux",
-        6,
+        r"Heracl[ei]itus|Heracleitean|flux|all things (?:are in motion|flow)",
+        8,
     )
     out += build_quoting_passages(
         RAW / "plato_theaetetus_jowett_pg1726.txt",
         "platonic",
         "Plato, Theaetetus (tr. Jowett)",
         "Project Gutenberg #1726",
-        r"Heracl[ei]itus|Heracleitean|all things flow|in a flux",
-        6,
+        r"Heracl[ei]itus|Heracleitean|all things flow|in a flux|perpetual flux|flowing",
+        8,
     )
     out += build_quoting_passages(
         RAW / "marcus_aurelius_long_pg2680.txt",
