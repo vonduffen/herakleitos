@@ -32,3 +32,21 @@ api_key_env = "TOGETHER_API_KEY"
 
 [backends.mock]
 kind = "mock"
+
+# ---- Free local PoC backends (ollama, OpenAI-compatible, localhost) ----
+# Teacher and judge are DIFFERENT families (Qwen vs Microsoft Phi).
+# Licenses verified 2026-07-22 (Apache-2.0 / MIT, see MODELS.md).
+# export OLLAMA_API_KEY=local before use
+# (ollama ignores auth; the harness just requires a non-empty key).
+
+[backends.teacher_local]
+kind = "openai"
+base_url = "http://localhost:11434/v1"
+model = "qwen3:8b"
+api_key_env = "OLLAMA_API_KEY"
+
+[backends.judge_local]
+kind = "openai"
+base_url = "http://localhost:11434/v1"
+model = "phi4:14b"
+api_key_env = "OLLAMA_API_KEY"

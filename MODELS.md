@@ -30,6 +30,19 @@ open-weights teacher/judge = **hosted API (Together AI)**.
 License re-verification: re-check the two open-weights LICENSE files at the start
 of each flywheel cycle (providers occasionally re-license or rename checkpoints).
 
+## Free local proof-of-concept (2026-07-22, zero-cost run)
+
+Local stand-ins for the production endpoints, same roles and same rules
+(teacher/judge different families; frontier grades only). All run via ollama /
+mlx-lm on Apple Silicon.
+
+| Model | PoC role | License | Verified | Notes |
+|---|---|---|---|---|
+| `qwen3:8b` (ollama) | Teacher (datagen) | Apache-2.0 | 2026-07-22 | https://huggingface.co/Qwen/Qwen3-8B |
+| `phi4:14b` (ollama) | Open-weights judge (gate) | MIT | 2026-07-22 | Microsoft Phi family ≠ Qwen ✓. https://huggingface.co/microsoft/phi-4 . Replaced mistral:7b (Apache-2.0, verified same day) which produced valid JSON but weak judgments in a calibration probe. |
+| Qwen3 1.7B/4B (mlx) | Student (LoRA SFT) | Apache-2.0 | 2026-07-22 (family) | Trained locally with mlx-lm. |
+| Claude (this session) | Frontier grader, offline only | n/a | n/a | Rubric validation + PoC spot-grading. Nothing it writes enters training data. |
+
 ## Role → phase map
 
 - **Phase 1 (eval suite):** frontier graders #1 and #2, offline only. Imitation-tier negatives

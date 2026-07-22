@@ -14,9 +14,15 @@ from evals.judge import rubrics
 from evals.judge.backends import Backend
 
 
+def strip_thinking(raw: str) -> str:
+    """Remove reasoning-mode blocks some open-weights models emit (e.g. Qwen3's
+    <think>...</think>) so downstream parsing sees only the final answer."""
+    return re.sub(r"<think>.*?</think>", "", raw, flags=re.S).strip()
+
+
 def _parse_json(raw: str) -> dict[str, Any]:
-    """Parse a judge reply, tolerating stray code fences."""
-    raw = raw.strip()
+    """Parse a judge reply, tolerating stray code fences and thinking blocks."""
+    raw = strip_thinking(raw)
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw)
     m = re.search(r"\{.*\}", raw, flags=re.S)
     if not m:
