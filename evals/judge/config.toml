@@ -1,31 +1,34 @@
 # Judge/model backends. Frontier backends: OFFLINE GRADING ONLY (MODELS.md).
-# Model choices marked "decision pending" await the human call recorded in the
-# build plan's open decisions; update here, nowhere else.
+# Decisions (2026-07-22): frontier judges = Anthropic + OpenAI; open-weights
+# teacher/judge = hosted API (Together AI). Licenses verified in MODELS.md.
+# Export the api_key_env vars before running calibrate.py / report.py.
 
 [backends.frontier1]
 kind = "anthropic"
-model = "claude-opus-4-8"        # decision pending
+model = "claude-opus-4-8"
 api_key_env = "ANTHROPIC_API_KEY"
 
 [backends.frontier2]
 kind = "openai"
 base_url = "https://api.openai.com/v1"
-model = "gpt-5.2"                # decision pending (must be a non-Anthropic provider)
+model = "gpt-5.2"                 # confirm the current GPT id against the account before first run
 api_key_env = "OPENAI_API_KEY"
 
 [backends.openweights_judge]
-# Datagen filter gate + runtime-grader distillation teacher. Must be a
-# DIFFERENT FAMILY from the teacher below (separation of powers).
+# Datagen filter gate + runtime-grader distillation teacher. DIFFERENT FAMILY
+# from the teacher below (Qwen vs DeepSeek) - separation of powers.
+# Apache-2.0 verified 2026-07-22 (see MODELS.md).
 kind = "openai"
-base_url = ""                    # decision pending (API provider or self-hosted)
-model = "qwen3-235b-a22b"        # decision pending; verify Apache-2.0 on the exact checkpoint
-api_key_env = "OPENWEIGHTS_JUDGE_API_KEY"
+base_url = "https://api.together.xyz/v1"
+model = "Qwen/Qwen3-235B-A22B-Instruct-2507"
+api_key_env = "TOGETHER_API_KEY"
 
 [backends.teacher]
+# Datagen generation. MIT verified 2026-07-22 (see MODELS.md).
 kind = "openai"
-base_url = ""                    # decision pending
-model = "deepseek-v4"            # decision pending; verify MIT on the exact checkpoint
-api_key_env = "TEACHER_API_KEY"
+base_url = "https://api.together.xyz/v1"
+model = "deepseek-ai/DeepSeek-V3.1"
+api_key_env = "TOGETHER_API_KEY"
 
 [backends.mock]
 kind = "mock"

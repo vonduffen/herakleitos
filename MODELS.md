@@ -15,14 +15,20 @@ Every model used anywhere in this pipeline is recorded here with its role and li
 
 ## Registry
 
+Decisions locked 2026-07-22: frontier judges = **Anthropic + OpenAI**;
+open-weights teacher/judge = **hosted API (Together AI)**.
+
 | Model | Role | License | Verified | Notes |
 |---|---|---|---|---|
-| Claude Opus-class (Anthropic API) | Offline grader #1 (calibration, spot checks) | Proprietary API | n/a | Grading only. Outputs never enter training data. ToS: outputs may not be used to train competing models — grading-only usage is the compliance boundary. |
-| Second frontier judge (OpenAI GPT-5.x or Google Gemini 3.x) | Offline grader #2 (cross-judge validation) | Proprietary API | n/a | Must be a different provider than grader #1. Human decision pending (see plan "Open decisions"). Same grading-only boundary. |
-| DeepSeek V3.x / V4-class | Teacher (datagen generation) | MIT (V3 weights) — **verify exact checkpoint before use** | PENDING | Candidate teacher. Record the exact checkpoint id + license URL here when wired in. |
-| Qwen3 (large, e.g. 235B-A22B) | Open-weights judge (datagen filter gate, runtime-grader distillation teacher) | Apache-2.0 — **verify exact checkpoint before use** | PENDING | Different family from teacher, per rule 3. |
-| Qwen3 8B/14B-class | Student (SFT target) | Apache-2.0 — **verify exact checkpoint before use** | PENDING | Known risk: student shares a family with the open-weights judge. Mitigated by frontier offline grading (different families) gating all headline numbers; revisit if scores diverge from frontier grades. |
+| `claude-opus-4-8` (Anthropic API) | Offline grader #1 (calibration, spot checks) | Proprietary API | n/a | Grading only. Outputs never enter training data. ToS: outputs may not be used to train competing models — grading-only usage is the compliance boundary. |
+| `gpt-5.2` (OpenAI API) | Offline grader #2 (cross-judge validation) | Proprietary API | n/a | Different provider than grader #1 ✓. Confirm the current GPT id against the account before first run. Same grading-only boundary. |
+| `deepseek-ai/DeepSeek-V3.1` (via Together AI) | Teacher (datagen generation) | **MIT** | **2026-07-22** | LICENSE file in the weights repo is the standard MIT License (Copyright 2023 DeepSeek); the V3.1/V3.2 line uses MIT for code **and** weights (older V3 had a separate model license — do not use that one). Source: https://huggingface.co/deepseek-ai/DeepSeek-V3.1/raw/main/LICENSE |
+| `Qwen/Qwen3-235B-A22B-Instruct-2507` (via Together AI) | Open-weights judge (datagen filter gate, runtime-grader distillation teacher) | **Apache-2.0** | **2026-07-22** | Different family from the teacher (Qwen vs DeepSeek), per rule 3 ✓. Source: https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507 |
+| Qwen3 8B/14B-class | Student (SFT target) | Apache-2.0 — **verify exact checkpoint before use** | PENDING (Phase 3) | Known risk: student shares a family with the open-weights judge. Mitigated by frontier offline grading (different families) gating all headline numbers; revisit if scores diverge from frontier grades. Pick the exact checkpoint at Phase 3. |
 | Distilled runtime grader (ours, from open-weights judge scores) | Harness best-of-N scorer + kitsch filter | MIT (ours) | n/a | Phase 4. Distillation teacher must be the open-weights judge, never a frontier model. |
+
+License re-verification: re-check the two open-weights LICENSE files at the start
+of each flywheel cycle (providers occasionally re-license or rename checkpoints).
 
 ## Role → phase map
 
