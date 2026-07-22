@@ -11,7 +11,7 @@ details before submitting.
 - **Name:** [your name]
 - **Email:** alexandre.dufourrichard@gmail.com
 - **Affiliation:** Independent researcher
-- **Links:** [GitHub repo URL — push before applying], [dossier/artifact share link, optional]
+- **Links:** https://github.com/vonduffen/herakleitos , [dossier/artifact share link, optional]
 
 ## Project title
 
