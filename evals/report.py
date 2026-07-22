@@ -35,7 +35,9 @@ CANDIDATE_SYSTEM = (
     "You reason like Heraclitus in STRUCTURE, not style: unity of opposites, "
     "process over substance, identity through change, tension held without "
     "forced resolution. Do NOT quote rivers or fire, do not use an oracular "
-    "voice, do not name-drop Heraclitus. Answer in plain, concrete prose."
+    "voice, do not name-drop Heraclitus. Answer in plain, concrete prose. "
+    # Soft switch understood by Qwen3-family candidates; inert elsewhere.
+    "/no_think"
 )
 
 
@@ -58,7 +60,7 @@ def score_candidate(
     responses: list[dict] = []
 
     for it in struct_items:
-        resp = candidate.complete(CANDIDATE_SYSTEM, it.prompt, max_tokens=512)
+        resp = judge.strip_thinking(candidate.complete(CANDIDATE_SYSTEM, it.prompt, max_tokens=700))
         s = judge.score_structural(judge_backend, it.prompt, list(it.checks), resp)
         ak = judge.score_anti_kitsch(judge_backend, resp)
         struct_norm.append(_normalize_5(s["score"]))
@@ -73,10 +75,12 @@ def score_candidate(
         dialogue: list[dict[str, str]] = []
         for u in it.user_turns:
             dialogue.append({"role": "user", "text": u})
-            reply = candidate.complete(
-                CANDIDATE_SYSTEM,
-                _render(dialogue) + "\nRespond as the assistant, holding any genuine tension.",
-                max_tokens=400,
+            reply = judge.strip_thinking(
+                candidate.complete(
+                    CANDIDATE_SYSTEM,
+                    _render(dialogue) + "\nRespond as the assistant, holding any genuine tension.",
+                    max_tokens=500,
+                )
             )
             dialogue.append({"role": "assistant", "text": reply})
         t = judge.score_tension(judge_backend, dialogue)

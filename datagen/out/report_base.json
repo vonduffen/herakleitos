@@ -1,0 +1,56 @@
+{
+  "candidate": "student_local",
+  "judge": "judge_local",
+  "generative_dimensions": {
+    "structural_transfer": 0.84375,
+    "anti_kitsch": 1.0,
+    "tension_holding": 0.5,
+    "corpus_consistency": 0.875
+  },
+  "generative_composite": 0.8052884615384616,
+  "full_composite_with_judge_dims": 0.8734375,
+  "n_structural": 8,
+  "n_tension": 8,
+  "responses": [
+    {
+      "id": "struct-0001",
+      "response": "A large software codebase remains \"the same\" in the sense that it continues to function, but this is a matter of perspective. The system is not the same in terms of its original code, but it is the same in terms of its structure, its purpose, and its role in the larger system. The original code is no longer present, but the system's essence\u2014its logic, its interactions, its behavior\u2014remains.\n\nThe system is the same because it persists through change. The original code is a relic, but the system is the same because it is continually restructured, reengineered, and reinterpreted. The same system can be thought of as a living organism, constantly evolving but retaining its core function.\n\nThe system is the same because it is not defined by its original form. It is the same because it is the same in function, in process, in the way it is used, and in the way it is maintained. The original code is a memory, but the system is the process. The system is the same because it is the same in its operation, in its role, in its impact.\n\nThe system is the same because it is not defined by its history. It is the same because it is the same in its use, in its effect, in its presence. The system is the same because it is the same in its function, in its purpose, in its role in the world.",
+      "structural": 3
+    },
+    {
+      "id": "struct-0002",
+      "response": "The couple's statement reflects a deeper truth: that change is not an end, but a continuation. Their marriage, like all relationships, is not a fixed entity but a dynamic process. What was once the same\u2014shared routines, mutual trust, the rhythm of daily life\u2014has evolved through the passage of time, yet the core of their bond remains. The marriage is not a static thing, but a living structure, shaped by the people who inhabit it. Their views, their habits, their interactions\u2014all are in flux, but the relationship itself is not. The couple is right in saying it is \"still the same\" because it has transformed, but not in a way that erases its original form. The marriage is both new and old, ever-changing, yet grounded in the same fundamental connection. The tension between change and continuity is what makes the relationship meaningful.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0003",
+      "response": "A merger claims its \"culture\" will survive. This claim is coherent when the company acknowledges that culture is not a fixed entity but a dynamic process shaped by continuous interaction, adaptation, and evolution. It is coherent when the company recognizes that culture is not static but rather a series of moments of creation, destruction, and reinvention. It is wishful when the company assumes that culture can be preserved in a static, unchanging form, treating it as a relic of the past rather than a living, evolving construct.\n\nCoherence arises when the company understands that culture is in flux, and survival depends on the ability to adapt and transform. Wishful thinking occurs when the company believes in a static, unchanging culture that can be preserved through mergers, ignoring the reality that culture is always in the process of becoming.",
+      "structural": 4
+    },
+    {
+      "id": "struct-0004",
+      "response": "A standing wave in a river persists despite the continuous flow of water around it. This shows that a 'thing' is not a fixed, unchanging entity. Rather, it is a dynamic interaction between opposing forces\u2014like the wave itself and the water it moves through. The wave does not remain the same because the water is constantly shifting, and the wave is not a solid mass but a pattern of movement. What persists is the structure of the wave, not the water itself. Thus, a 'thing' is not a static entity but a process of becoming, shaped by the tension between change and continuity.",
+      "structural": 4
+    },
+    {
+      "id": "struct-0005",
+      "response": "The body changes, the mind shifts, and the experiences accumulate like layers of sand in a river. The 60-year-old is not the same as the 20-year-old\u2014they are different in every way, yet both are the result of the same process: the continuous replacement of cells, the accumulation of memory, and the evolution of thought. The self is not fixed, but in constant flux, shaped by the same forces that renew the body. To speak of them as the same is to mistake the surface for the essence, the now for the then. The self is not a stone, but a river, ever flowing, ever changing.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0006",
+      "response": "The claim that a mathematical object like the number 7 is timeless and unchanging can be read through the lens of Heraclitus' philosophy: the world is in constant flux, and what appears to be fixed is, in fact, in perpetual transformation. \n\nTo Heraclitus, the river is never the same twice, and the stone is always new. The number 7, in this view, is not a fixed entity but a concept that arises from the interaction of ideas and the process of understanding. The number itself is not a permanent thing but a construct that emerges from the relationship between the observer and the structure of thought.\n\nThus, the number 7 is not timeless in the way that a physical object might be. It is, rather, a moment in the process of becoming, a symbol that shifts with the context in which it is used. The number is not fixed, but its meaning is, in part, determined by the frame of reference through which it is understood. The number, like all things, is in a state of becoming\u2014always changing, always being redefined by the act of knowing.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0007",
+      "response": "The nation's name and borders are fixed, yet its essence\u2014its people, laws, language, and values\u2014are in constant flux. This paradox reveals the nature of continuity in a changing world.\n\nThe name and borders are symbols of identity, but they are not the core of a nation. The true continuity lies in the process of transformation. The nation is not a static entity but a dynamic system, constantly reshaped by the people who inhabit it.\n\nThe laws and language evolve with the people, reflecting their changing needs and understanding. The values of a nation are not fixed but are molded by the collective will of its citizens. Even as the nation's surface remains, its inner structure is in perpetual motion.\n\nThus, the continuity of a nation is not in the preservation of its former state, but in the ongoing evolution of its people and institutions. The nation is a living entity, shaped by the passage of time and the ceaseless movement of its people.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0008",
+      "response": "A forest's identity is not fixed, but emerges through its continuous transformation. It is not a single entity but a series of moments, each shaped by the interplay of fire and regrowth, of old trees and new ones, of soil and root, of light and shadow. When it burns, it is not lost\u2014it is reformed. When it regrows, it is not the same. The forest is always changing, but the moment we name it, it becomes something else. The same forest, at different times, is a fire, a seed, a memory. Its identity is not in what it is, but in the act of being.",
+      "structural": 4
+    }
+  ]
+}

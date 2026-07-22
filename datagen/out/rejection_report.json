@@ -1,0 +1,9 @@
+{
+  "total": 126,
+  "accepted": 100,
+  "reasons": {
+    "consistency_incompatible": 12,
+    "structural_below_threshold": 11,
+    "too_short": 3
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "candidate": "student_local",
+  "judge": "judge_local",
+  "generative_dimensions": {
+    "structural_transfer": 0.84375,
+    "anti_kitsch": 1.0,
+    "tension_holding": 0.625,
+    "corpus_consistency": 1.0
+  },
+  "generative_composite": 0.8533653846153846,
+  "full_composite_with_judge_dims": 0.9046875,
+  "n_structural": 8,
+  "n_tension": 8,
+  "responses": [
+    {
+      "id": "struct-0001",
+      "response": "A large software codebase remains the same through decades of refactoring because the system\u2019s structure, constraints, and purpose endure, even as the specific code that implements them shifts. The original code is not preserved as a fixed artifact but is instead transformed, adapted, and recombined to meet evolving needs. This persistence of form\u2014such as architecture, algorithms, or logical dependencies\u2014creates a scaffold that allows the system to be rebuilt without losing its identity. The tension lies in the interplay between what is preserved and what is altered, where the system\u2019s core function and constraints outlive the mutable details, ensuring that the system\u2019s essence, not its static form, defines it across time.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0002",
+      "response": "The couple\u2019s assertion is rooted in the shared process of becoming rather than a fixed essence. Their marriage endured not because it remained unchanged, but because the couple\u2019s evolving perspectives, experiences, and needs continuously shaped it into new forms. The tension between stability and change is preserved through regular renewal, with each year adding layers of intimacy, conflict, or adaptation that keep the relationship from settling into a static or predictable state. The marriage\u2019s identity is not a single, unchanging thing but a dynamic scaffold, built on the constant interplay of what is lost and what is gained, creating a sense of continuity that suggests it is, in fact, always becoming.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0003",
+      "response": "A merger\u2019s claim that its \u2018culture\u2019 will survive is coherent only if the merged entity\u2019s identity is not fixed but emerges through ongoing processes of interaction, adaptation, and tension between conflicting values. The survival of a culture depends on whether it can sustain itself by evolving rather than being preserved, not on the persistence of a static core. If the merger forces the merged organization to retain a rigid, unchanging culture, the claim becomes wishful, as it assumes a static foundation that may dissolve into irrelevance or conflict. The coherence of the claim arises from the organization\u2019s capacity to navigate change, integrate diverse influences, and reconfigure itself in response to new realities, rather than relying on a fixed set of traditions or beliefs.",
+      "structural": 3
+    },
+    {
+      "id": "struct-0004",
+      "response": "A standing wave persists through continuous change, yet remains recognizable as the same pattern\u2014this suggests that a 'thing' is not fixed by its static composition but emerges from the ongoing interactions and tensions that define it. Its persistence arises from the rhythm of water movement, not from an unchanging core, yet its identity is sustained by the repetition of its form, even as the medium it relies on keeps shifting. The wave\u2019s survival hinges on the balance between fluidity and structure, where the thing\u2019s nature is not in the sum of its parts but in the pattern of change that sustains it.",
+      "structural": 4
+    },
+    {
+      "id": "struct-0005",
+      "response": "The body\u2019s composition and experiences accumulate, but the core self\u2014its capacity to think, feel, and adapt\u2014remains intact through continuous renewal. The 60-year-old and 20-year-old are not the same in terms of biology or memory, yet their shared identity persists because the process of becoming and being constantly reshapes them into a single, evolving entity. The mind\u2019s capacity to hold and reframe experiences ensures that while the flesh and mind change, the sense of self endures as a product of sustained engagement with the world.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0006",
+      "response": "The number 7\u2019s unchanging nature is a stable presence, yet it persists only through the lens of convention and notation. Its essence, however, is not fixed but emerges in flux: as a symbol, it endures, but its being is sustained by the ongoing agreement to label it so. The tension lies in the contrast between the object\u2019s role as a sign and its capacity to dissolve into other forms\u2014like a score that becomes a melody, a melody that becomes a memory, a memory that becomes a thought. The 7\u2019s persistence is a product of human minds, not an inherent quality, yet its existence depends on the shared assumptions that make it a useful, if transient, marker.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0007",
+      "response": "The nation\u2019s name and borders endure as fixed markers, yet the underlying conditions\u2014its people, laws, and values\u2014are in constant flux, shaped by generations of change. This tension between permanence and impermanence is what defines the state\u2019s survival, revealing that identity is not a static thing but a product of how it is continually reconfigured. The name and borders are not the essence but the framework, which must adapt to the evolving society to remain relevant, even as the core remains a negotiation between what was and what is becoming.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0008",
+      "response": "A forest\u2019s identity emerges not from fixed components but from the persistent tension between its state of being and the conditions that shape it. Its burning and regrowth are not opposites but interdependent processes, each revealing how it persists: the same tree that once stood is now replaced by a new one, the same soil that breaks down only to hold what persists. The forest\u2019s soul lies in its capacity to hold and release, to be both consumed and reborn, its very persistence resting on the constant flux of life and decay, decay and renewal. What remains is not a fixed thing but a becoming, where the same forest is always in the act of becoming, and becoming is what makes it endure.",
+      "structural": 3
+    }
+  ]
+}
