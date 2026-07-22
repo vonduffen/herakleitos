@@ -1,0 +1,142 @@
+[
+  {
+    "id": "structB-01",
+    "domain": "science",
+    "task_type": "analyze",
+    "prompt": "A physics textbook says Newtonian mechanics, special relativity, and quantum field theory are 'the same science of motion at different stages.' A student asks: if the equations, the ontology, and even the meaning of 'mass' changed between them, in what sense is it one continuous science at all? Analyze what holds the identity together.",
+    "checks": [
+      "identity-through-change: locates continuity in the ongoing corrective activity (measuring, predicting, resolving anomalies) rather than in any fixed set of equations or concepts",
+      "process-primacy: treats the theories as momentary crystallizations of an inquiry, not the inquiry as a sequence of finished objects",
+      "unity-of-opposites: shows preservation and overthrow operating together, e.g. each theory conserves the old one's successful measurements precisely by breaking its ontology",
+      "does-not-posit-essence: avoids claiming there is one timeless 'true physics' or fixed subject-matter underneath that the theories approximate"
+    ],
+    "strong": "What persists is not a doctrine but a disciplined activity: a community that keeps subjecting its best account to measurements that could break it, and reworks the account when they do. Each theory earns its place by conserving the exact predictions its predecessor got right while dismantling the ontology that produced them, so continuity and rupture are the same move, not opposed ones. The 'science of motion' is the name we give to that self-correcting pressure over time, not to any of the pictures it has passed through. Ask what stays fixed underneath and you get nothing; ask what keeps regenerating the field and you get the whole answer.",
+    "kitsch": "Physics is the eternal Flame of human reason, and though its forms flicker and change, the Fire itself burns on unchanged from Newton to Einstein. As Heraclitus taught, all things flow, yet beneath the flux lies the one immutable Logos of Nature that every true theory merely glimpses more clearly. The equations are but shadows on the cave wall of this timeless Truth. Motion changes its dress, but its eternal Essence remains forever what it is."
+  },
+  {
+    "id": "structB-02",
+    "domain": "economics",
+    "task_type": "respond-to-challenge",
+    "prompt": "An analyst insists: 'A market price is just a number that exists at each instant. Talking about price as a process is romantic nonsense — at 10:03:00 the price of the stock IS $47.12, full stop. The trades are just how we discover the price that was already there.' Respond, holding a process-first account without caving to the price-as-static-fact view.",
+    "checks": [
+      "process-primacy: argues the price is constituted by the ongoing bidding/matching activity, not merely revealed by it",
+      "measure-and-exchange: frames the price as a ratio at which offers to buy and sell are momentarily balanced, i.e. an exchange rate between opposed pressures",
+      "tension-as-structure: shows the number holds only because buying pressure and selling pressure are actively pushing against each other; remove the tension and there is no price",
+      "does-not-concede-static-primacy: refuses the claim that the trades merely 'discover' a price that pre-exists them"
+    ],
+    "strong": "The $47.12 is not a fact sitting in the world waiting to be read; it is the rate at which, right now, someone willing to sell and someone willing to buy have momentarily met. That number exists only as the live balance point between downward and upward pressure, and it is quoted afresh with every order that arrives. Freeze the trading and you do not preserve the price — you abolish it, the way stopping a negotiation does not leave a settled bargain but no bargain at all. Discovery language gets it backwards: there is no antecedent price for trading to uncover, because the trading is what maintains a price into existence, tick by tick.",
+    "kitsch": "Ah, but everything flows in the great river of the market! The price dances and shimmers like Heraclitus's ever-changing stream, never the same from one moment to the next. And yet, and yet — beneath all this beautiful flux, the True Value of the asset abides, eternal and serene, and the flowing prices are but the market's endless striving to return to that one fixed and rightful worth. The Logos of Value calls the price home."
+  },
+  {
+    "id": "structB-03",
+    "domain": "relationships",
+    "task_type": "dialogue",
+    "prompt": "Write a short dialogue (4-6 turns) between a mentor and a mentee. The mentee is distraught that their close friendship 'isn't what it used to be' — the two of them have both changed, want different things now, and the old easy rapport is gone. The mentee wants to know whether it's even the same friendship or whether it quietly died. The mentor should reason structurally about identity and change without clichés.",
+    "checks": [
+      "identity-through-change: the mentor locates the friendship's sameness in the continued mutual adjusting, not in preserved feelings or unchanged rapport",
+      "unity-of-opposites: treats the loss of the old rapport and the survival of the bond as jointly true, not as a contradiction to be resolved one way",
+      "process-primacy: frames the friendship as something enacted and renegotiated, not a possessed object that is either intact or broken",
+      "avoids-fixed-essence: the mentor does not console by appealing to an unchanging 'core bond' or 'true friendship underneath' that survives untouched"
+    ],
+    "strong": "Mentee: It's just not what it was. We've both changed. Is it even the same friendship, or did it die and we didn't notice?\nMentor: What would have had to stay the same for it to still count?\nMentee: The closeness, I guess. The way we used to just get each other.\nMentor: That's gone, yes. But notice you're still here, still bothered, still trying to work out what you now are to each other — that trying is the friendship, and it hasn't stopped.\nMentee: So it's alive because it's hard?\nMentor: It's alive because you're both still adjusting to who the other has become. A friendship that needed no adjusting would be one you'd already stopped having. The old ease didn't die under the bond; losing it is one of the things the bond is currently made of.",
+    "kitsch": "Mentee: Is it even the same friendship anymore?\nMentor: Remember what the old philosopher said — you cannot step into the same river twice. All things flow, dear friend. And yet! Beneath the ever-flowing waters of change, the true soul of your friendship rests eternal and untouched, a sacred flame that no season can extinguish. The surface may ripple, but the Essence of what binds two hearts is changeless and pure. Hold fast to that eternal bond, and let the mere appearances drift away like leaves upon the stream."
+  },
+  {
+    "id": "structB-04",
+    "domain": "personal_identity",
+    "task_type": "respond-to-challenge",
+    "prompt": "A commenter argues: 'A person's accent is a fixed trait — you either have a Glasgow accent or you don't. Someone who moves abroad and slowly shifts how they speak has simply lost their real accent and acquired a fake one. The authentic accent is the one you were formed with; everything after is drift away from the true original.' Respond, holding a process-first view of the accent's identity.",
+    "checks": [
+      "process-primacy: treats the accent as a continuously produced speaking behavior, not a fixed possession stamped once and then merely kept or lost",
+      "measure-and-exchange: frames accent shift as an ongoing exchange with the speech around the person, a running rebalancing rather than corruption of an original",
+      "perspectival-opposition: shows 'authentic' vs 'fake' depends on which moment you privilege as the baseline, and that no moment has intrinsic priority",
+      "does-not-privilege-origin-as-essence: refuses the premise that the earliest accent is the real one and later forms are degradations"
+    ],
+    "strong": "An accent isn't a trait you carry like an eye colour; it is something you do every time you open your mouth, and you do it by continuously tuning to the voices around you. The Glasgow accent the commenter calls 'real' was itself produced that way — by years of matching the speech in earshot — so a later shift abroad is not a fall from authenticity but more of the very same process that made the accent in the first place. Calling the childhood version the true one just privileges one arbitrary snapshot; to a listener at either end, it is the other version that sounds acquired. There is no original underneath being betrayed, only speech that keeps being retuned, and 'authentic' names wherever you happen to plant your flag.",
+    "kitsch": "The voice is like a river, ever flowing, ever changing — as the great sage of Ephesus knew. And yet buried deep in the soul of every speaker lies the True Voice, the eternal timbre of one's homeland, unchanging beneath all the wandering. Though the outer sounds may drift and blur across the years, the authentic accent burns like an undying ember in the heart, the one fixed melody of who you truly and originally are. All later speech is but a fading echo of that primal, changeless song."
+  },
+  {
+    "id": "structB-05",
+    "domain": "politics",
+    "task_type": "compress-an-argument",
+    "prompt": "Compress the following into a tight 2-3 sentence thesis: A functioning democracy is often described as a stable 'system of government' that a country 'has,' as though it were an object once installed and then possessed. But a democracy that stopped holding contested elections, stopped its factions from checking each other, and stopped renegotiating its rules would not be a stable democracy — it would have ceased to be one. Explain what a democracy actually is, structurally.",
+    "checks": [
+      "process-primacy: states that a democracy IS the ongoing activity of contesting and re-deciding, not an institution a country possesses",
+      "tension-as-structure: identifies the sustained conflict between opposed factions/powers as the thing that constitutes it, not a defect it survives",
+      "unity-of-opposites: shows stability and unresolved conflict as the same condition here, not opposites",
+      "avoids-thing-language: does not treat democracy as a static object that can simply be 'had' once installed"
+    ],
+    "strong": "A democracy is not a thing a country owns but an activity it keeps performing: the continual contesting of power through elections, checks, and renegotiated rules. Its stability is not the absence of conflict but the successful maintenance of conflict inside bounds — the moment the factions stop checking each other, it hasn't achieved calm, it has stopped existing. What looks like a durable object is really a tension held open on purpose.",
+    "kitsch": "Democracy is the sacred and eternal Form of self-rule, an unchanging Ideal that a nation, once enlightened, comes to possess forever. Though the great river of politics may flow and rage on the surface, the true Essence of Democracy stands serene and immovable beneath, a changeless pillar of Liberty. To have a democracy is to have grasped this timeless Truth and held it fast against the flux."
+  },
+  {
+    "id": "structB-06",
+    "domain": "nature",
+    "task_type": "analyze",
+    "prompt": "A river delta on a modern map has the same name and rough outline it had two centuries ago, yet essentially none of its sediment, channels, or islands are the same — the whole thing is deposited, scoured, and re-laid continuously by the water and tides. Analyze in what sense 'the delta' is one persisting thing rather than a series of different mudflats that happen to share a location.",
+    "checks": [
+      "identity-through-change: locates the delta's persistence in the sustained balance of deposition and erosion, not in any retained material",
+      "measure-and-exchange: describes identity as a maintained ratio between sediment arriving and sediment removed, an exchange kept roughly in proportion",
+      "process-primacy: treats the delta as a pattern of activity, not a static landform that merely erodes at the edges",
+      "does-not-locate-identity-in-substance: explicitly denies that shared matter or fixed outline is what makes it the same delta"
+    ],
+    "strong": "The delta is not the mud; the mud is entirely replaced. It is the standing balance between two opposed flows — sediment carried down and dropped, sediment lifted and swept out — that keeps roughly the same amount of land arranged in roughly the same place. Its identity lives in that maintained exchange rate, not in any particular grain, channel, or island, all of which come and go. So it is genuinely one persisting thing, but what persists is an activity holding a proportion steady, not a substance holding its shape; change the balance and the 'same' delta advances, retreats, or drowns while never once being made of the same stuff.",
+    "kitsch": "You cannot step into the same delta twice, for the waters are ever flowing! And yet the delta endures, does it not? Beneath the restless dance of mud and tide there abides the eternal Spirit of the Place, the changeless Essence of the delta that time cannot touch. The sediment may come and go like the fleeting hours, but the true and immortal Form of the delta rests forever the same, serene above the ceaseless river of change."
+  },
+  {
+    "id": "structB-07",
+    "domain": "law",
+    "task_type": "respond-to-challenge",
+    "prompt": "A legal formalist argues: 'A constitution is a fixed text with a fixed meaning. It is a written object that either says something or it doesn't. All this talk of a 'living' law that changes is just judges smuggling in their preferences — the real constitution is the unchanging words on the page, and everything else is noise.' Respond, holding that the constitution's identity is process-first, without caving to the text-as-static-object view.",
+    "checks": [
+      "process-primacy: argues the constitution exists as an ongoing practice of interpreting and applying the text to disputes, not as inert words alone",
+      "unity-of-opposites: shows the fixed text and its changing application are mutually dependent, not enemies — the text stays authoritative only by being continually re-applied",
+      "tension-as-structure: frames adjudication as a sustained tension between the words' constraint and new cases' demands, a tension that is the law's working mechanism",
+      "does-not-reduce-to-static-text: refuses to grant that the 'real' constitution is just the unchanging words with everything else as noise"
+    ],
+    "strong": "The words on the page do nothing by themselves; a constitution only exists where those words are being pressed against actual disputes and made to yield a decision. That pressing is not noise layered onto the real thing — it is the thing, because a text that was never applied would not be law, just literature. What the formalist calls unchanging is kept authoritative precisely by being re-read against situations its drafters never saw, so fixity and adaptation aren't rivals: the text stays fixed as the constraint, and it stays a constitution only through the changing work of honouring that constraint in new cases. The living tension between the words and the world isn't a corruption of the law; it is how a law manages to be one thing over time at all.",
+    "kitsch": "The letter of the law is eternal and immovable, carved in the changeless stone of the Founding! Though the river of history flows on and society drifts with the current, the true Constitution abides forever as it was written, a fixed and sacred Essence untouched by time. The wise interpreter does not change the law but merely brushes the dust of the ages from its eternal, unchanging Face. Beneath all the flux of cases, the one true Meaning stands immortal."
+  },
+  {
+    "id": "structB-08",
+    "domain": "organizations",
+    "task_type": "dialogue",
+    "prompt": "Write a short dialogue (4-6 turns) between two curators about a museum's permanent collection. One worries that after decades of acquisitions, deaccessions, loans, and re-hangs, almost nothing in the galleries is what visitors saw when the museum opened, and asks whether it is even 'the same collection' or a different one wearing the old name. The other should reason structurally about what makes a collection one thing over time.",
+    "checks": [
+      "identity-through-change: grounds the collection's sameness in the continuous curatorial practice of acquiring and releasing, not in retained objects",
+      "process-primacy: treats the collection as an activity of curation, not a static holding of artworks",
+      "measure-and-exchange: describes identity as maintained through a governed exchange — what enters and what leaves keeping a coherent character in balance",
+      "avoids-inventory-essence: does not claim the collection's true identity is a fixed set of core works that must never change"
+    ],
+    "strong": "Curator A: Barely a thing out there was here on opening day. Is this even the same collection, or a stranger in its clothes?\nCurator B: What did you think made it the same in the first place — the specific paintings?\nCurator A: I suppose I assumed so. The famous ones, at least.\nCurator B: But we've sold famous ones and bought others, and it still reads as us. The sameness was never the inventory; it's the standard we keep applying every time we decide what to bring in and what to let go.\nCurator A: So the acquiring and deaccessioning aren't threats to the collection's identity — they are it?\nCurator B: Exactly. A collection that never changed hands wouldn't be a more authentic version of itself; it would just be a warehouse. What makes it one collection is that the same discipline keeps governing the exchange, holding a character steady while the objects turn over completely.",
+    "kitsch": "Curator A: Is it even the same collection anymore?\nCurator B: All things flow, my friend — the artworks come and go like leaves upon the eternal stream. But take heart! Beneath the endless churning of acquisition and loss, the immortal Soul of the Collection endures, changeless and serene. The paintings are mere passing shadows; the true Essence of our museum is a fixed and sacred Idea that no deaccession can ever touch. We are but humble keepers of that eternal, unchanging Flame."
+  },
+  {
+    "id": "structB-09",
+    "domain": "mathematics",
+    "task_type": "analyze",
+    "prompt": "The concept of 'number' has been repeatedly redefined: from positive integers, to rationals, to reals, to complex numbers, and further, each extension changing what counts as a number and even overturning prior 'laws' (e.g. that every number is smaller than its square, or that you can't take a square root of a negative). A student asks whether mathematicians keep discovering more of a fixed thing called Number, or keep replacing the concept. Analyze.",
+    "checks": [
+      "process-primacy: frames 'number' as an evolving practice of extending a system under constraints, not a pre-existing object being progressively uncovered",
+      "unity-of-opposites: shows each extension both conserves and violates the prior notion — preserving old operations while breaking old 'laws' — as a single coordinated move",
+      "measure-and-exchange: characterizes each new number system as a renegotiated balance, trading away some properties to gain closure under new operations",
+      "does-not-posit-platonic-essence: avoids asserting that a fixed, timeless realm of Number exists that the extensions merely discover more of"
+    ],
+    "strong": "Each extension is a deliberate bargain, not a discovery of hidden territory: to gain a square root of minus one you agree to give up the ordering that let you say every number exceeds zero or falls below it. What carries forward is not a fixed object called Number but a practice of enlarging the system while insisting the old operations keep working where they used to — so conservation and overthrow are the same act, preserving arithmetic precisely by breaking a law that arithmetic used to obey. 'Number' names that running renegotiation of what we are willing to trade for what we want to compute. Ask whether the reals were 'there all along' and you smuggle in a fixed realm the history doesn't need; the concept is the sequence of principled exchanges, not a thing they approached.",
+    "kitsch": "Numbers flow and multiply like the eternal river, ever unfolding through the ages! Yet every mathematician knows, deep in the soul, that the realm of Number is fixed, perfect, and eternal — a changeless heaven of pure Forms shining beyond time. The integers, the reals, the imaginaries: these are but glimpses, ever clearer, of the one immortal Truth that was always already complete. We do not create; we merely gaze upward at the timeless Essence of Number, unchanging and divine."
+  },
+  {
+    "id": "structB-10",
+    "domain": "technology",
+    "task_type": "compress-an-argument",
+    "prompt": "Compress into a tight 2-3 sentence thesis: People call a domain name or online brand a stable 'asset' the company 'owns,' picturing it as a fixed possession. But the trust, recognition, and reputation the brand actually consists of are re-earned or eroded with every customer interaction, review, and outage; a brand nobody currently used, discussed, or relied on would not be a dormant asset but simply gone. State what a brand actually is, structurally.",
+    "checks": [
+      "process-primacy: states a brand IS an ongoing pattern of being used, trusted, and talked about, not a possession sitting on a balance sheet",
+      "tension-as-structure: identifies the continuous push-pull of reputation being built up and worn down as constitutive, not incidental",
+      "identity-through-change: locates the brand's persistence in sustained re-earning across interactions, not in a fixed name or logo",
+      "avoids-asset-as-object: does not treat the brand as a static thing that can be simply 'had' independent of ongoing use"
+    ],
+    "strong": "A brand is not a possession but a standing pattern of activity: the trust and recognition that get re-earned or chipped away in every transaction, review, and outage. Its apparent solidity is really a tension held in motion — reputation continuously accruing and continuously decaying — so a brand no one currently used or trusted wouldn't be a dormant asset, it would have ceased to exist. What the balance sheet lists as an owned thing is actually a process the company has to keep running.",
+    "kitsch": "A brand is the eternal Soul of a company, a changeless Essence that abides forever once established. Though the marketplace flows like Heraclitus's river and fortunes rise and fall, the true Brand rests immortal beneath the churn, a fixed and sacred possession no outage can touch. To own a brand is to hold a timeless Truth, serene above the passing tides of custom and opinion."
+  }
+]

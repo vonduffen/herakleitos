@@ -1,0 +1,147 @@
+[
+  {
+    "id": "structD-01",
+    "domain": "technology",
+    "task_type": "analyze",
+    "prompt": "A developer says the bug they've been chasing for three days 'was never really one bug.' Each fix revealed another failure that only existed because of the previous fix. Analyze what it means to say the bug's identity changed as they worked on it.",
+    "checks": [
+      "identity-through-change: treats 'the bug' as constituted by the unfolding sequence of fixes and failures rather than a fixed defect waiting to be found",
+      "process-primacy: locates the bug in the ongoing interaction between code, developer, and prior fixes rather than in a static line of source",
+      "unity-of-opposites: shows fixing and breaking as one and the same act rather than two opposed stages",
+      "avoids-being-trap: does not claim there was a single 'real' underlying bug that merely stayed hidden until finally revealed"
+    ],
+    "strong": "The thing the developer calls 'the bug' isn't a defect sitting in one line; it's the moving boundary between what the code does and what they expect, and every fix redraws that boundary. Each repair was also a fresh break, because it changed the conditions under which the next failure could appear at all, so fixing and breaking were one motion rather than two. What persisted across three days wasn't an object but a pattern of correction, and the developer's shifting understanding was part of that pattern, not an observer standing outside it. Asking which one was the 'real' bug misreads an ongoing process as a hidden thing.",
+    "kitsch": "You cannot step into the same codebase twice, for the bug is an eternal Flux, forever slipping through the developer's fingers like the river of Becoming. Yet beneath the churning surface lies the True Bug, the unchanging Essence that the fixes merely veil, waiting in the Logos of the source to be revealed at last. The developer's journey is a fire that consumes each false patch until only the Real Defect, fixed and one, remains."
+  },
+  {
+    "id": "structD-02",
+    "domain": "relationships",
+    "task_type": "dialogue",
+    "prompt": "Write a short dialogue between a former student and their aging mentor, who now disagree on almost everything in their field. The student claims the mentorship 'is over' because nothing of their original agreement survives. Have the mentor respond in a way that locates their bond in the disagreement itself.",
+    "checks": [
+      "unity-of-opposites: mentor frames the ongoing disagreement as a form of the relationship's continuation rather than its end",
+      "tension-as-structure: presents the sustained friction as what holds the bond together rather than what dissolves it",
+      "identity-through-change: mentor treats the relationship as the same one precisely because it has kept transforming",
+      "avoids-being-trap: does not ground the bond in some preserved shared belief or fixed original essence that outlasted the changes"
+    ],
+    "strong": "Student: \"We agree on nothing now. Whatever we had is gone.\"\nMentor: \"We disagree in a language only the two of us speak. You push exactly where I taught you the ground was soft, and no one else can argue with me the way you do, because you were built partly out of me and partly against me. If some fixed creed had survived, we'd be strangers reciting it to each other. The bond was never the old agreement kept intact; it's that we have never once stopped grinding on each other. Stop the grinding and there really would be nothing left, and that emptiness is the ending you keep mistaking this for.\"",
+    "kitsch": "Student: \"Whatever we had is gone.\"\nMentor: \"Ah, but as the ancients knew, all things flow. Our souls are two flames drawn from one eternal Fire, and though the river of years carries us apart, the True Bond is a changeless star fixed above the flux. Beneath the ever-turning wheel of opinion, our real Friendship abides untouched, the way the sun returns each dawn exactly as it was.\""
+  },
+  {
+    "id": "structD-03",
+    "domain": "organizations",
+    "task_type": "respond-to-challenge",
+    "prompt": "A critic argues that treating a corporation as a continuous 'legal person' is a fiction, since its shareholders, employees, assets, and even its name may all be replaced over time, so there is no there there. Respond to this challenge.",
+    "checks": [
+      "identity-through-change: grounds the corporation's continuity in the unbroken chain of obligations and relations rather than in any fixed constituent",
+      "process-primacy: treats the corporation as an ongoing activity of contracting, employing, and owing rather than a thing assembled from parts",
+      "measure-and-exchange: identifies the regulated patterns of exchange, such as debts carried forward and contracts honored, as what constitutes the persisting entity",
+      "avoids-being-trap: does not defend continuity by appealing to an unchanging core substance or an essential attribute the entity secretly retains"
+    ],
+    "strong": "The critic assumes that if no part stays fixed then nothing persists, but persistence here is a matter of maintained relations, not retained stuff. The corporation is the same entity because obligations flow through it without interruption: yesterday's debt is still owed, last year's contract still binds, and every replacement of a part happens under rules that carry the commitments forward. It is not a thing with a hidden core; it is a regulated pattern of exchange that keeps its books balanced across each substitution. The 'there' the critic can't find is exactly the continuity of that accounting, and there is no additional substance underneath for it to be.",
+    "kitsch": "Heraclitus said all is flux, and so the corporation flows like a river of capital. Yet its Legal Personhood is an eternal Form, a changeless Essence stamped upon the shifting matter of staff and assets. As the flame stays one flame though its fuel is wholly consumed, so the Company's immortal Soul persists above the churn. The parts are mere Becoming; the Person is Being, one and unchanging, and there the critic's answer lies."
+  },
+  {
+    "id": "structD-04",
+    "domain": "nature",
+    "task_type": "analyze",
+    "prompt": "A glacier is often called 'a river of ice' that can nonetheless sit in the same valley for ten thousand years. Analyze the sense in which a glacier is the same object over that span, given that the ice at any moment is entirely different from the ice a century earlier.",
+    "checks": [
+      "process-primacy: identifies the glacier as a flow of accumulation balanced against loss rather than a mass of ice",
+      "measure-and-exchange: locates its identity in the steady ratio between snowfall input and melt output that keeps its form stable",
+      "identity-through-change: treats the glacier as the same because it persists through the continuous replacement of its material, not despite it",
+      "unity-of-opposites: shows accumulation and ablation as jointly constitutive rather than as opposed forces",
+      "avoids-being-trap: does not treat the glacier as a fixed body of ice that merely happens to shift position"
+    ],
+    "strong": "A glacier is not a block of ice but a throughput: snow packs down at the head, ice creeps downhill, and melt sheds it at the snout, all at the same time. It keeps its shape only because gain and loss hold a rough proportion, and change that ratio and the glacier advances or vanishes, which is precisely why it registers climate at all. The ice you could touch today is nothing of the ice of a century ago, yet it is the same glacier exactly because that turnover never paused and stayed roughly balanced. Its identity is the maintained flow, not the material passing through it.",
+    "kitsch": "As the sage of Ephesus intoned, everything flows, even the ice; the glacier is Nature's slow river, ever-changing, never the same. And yet its Glacial Essence endures, a Platonic coldness untouched by the melt, the eternal Idea of the valley made manifest in frost. Ten thousand years of Flux cannot touch the changeless Being that sleeps beneath, one and perfect, the true glacier behind the passing ice."
+  },
+  {
+    "id": "structD-05",
+    "domain": "personal_identity",
+    "task_type": "compress-an-argument",
+    "prompt": "Compress into three or four sentences the argument that a person's reputation is not a possession they own but something that exists only in its continual remaking by others.",
+    "checks": [
+      "process-primacy: frames reputation as an ongoing activity of others' judgments rather than a stored attribute of the person",
+      "perspectival-opposition: shows the same person's reputation as genuinely different across different communities without positing one true version",
+      "identity-through-change: treats a reputation as continuous only through its constant revision",
+      "avoids-being-trap: does not locate reputation as a fixed quantity a person 'has' independent of its being actively maintained"
+    ],
+    "strong": "A reputation is not a thing you hold but an event that keeps happening: it exists only while others are telling and revising accounts of you. Because it lives in that circulation, it is genuinely different in different rooms, and no room holds the 'real' version, since each is a live rendering rather than a copy of some original. It stays yours only insofar as those tellings keep referring back to the same track record, so the moment people stop remaking it, it does not sit dormant in reserve; it simply ceases. What looks like something you own is really a balance others keep re-striking.",
+    "kitsch": "Character is destiny, and all things flow, so your reputation drifts downstream like leaves upon the eternal current. Yet the Good Name is a fixed star, an inner Essence that shines the same in every eye, unchanged by gossip's fire. Guard this changeless Reputation and it will abide, for beneath the flux the True Self remains forever exactly what it is, one and entire."
+  },
+  {
+    "id": "structD-06",
+    "domain": "mathematics",
+    "task_type": "respond-to-challenge",
+    "prompt": "Someone insists that the equation x squared plus y squared equals 1 and the polar equation r equals 1 cannot describe 'the same circle,' because they are built from different variables, different operations, and different notions of a point. Respond.",
+    "checks": [
+      "perspectival-opposition: treats the two descriptions as opposed vantage points on one object, with neither privileged as the real one",
+      "identity-through-change: grounds the circle's sameness in what is preserved under the transformation between the systems, not in any single representation",
+      "unity-of-opposites: shows the Cartesian and polar descriptions as jointly disclosing the object rather than as competing claims",
+      "avoids-being-trap: does not claim the circle is a static Form sitting behind both notations and untouched by how it is described"
+    ],
+    "strong": "The two equations are not rival claims about a hidden object; they are the same circle seen from two coordinate stances, and what makes it 'the same' is exactly that a definite transformation carries each description into the other while preserving every point. Identity here is not a changeless form lurking behind the symbols; it is the invariance that survives when you move between frames. Cartesian and polar do not compete, either: the polar form foregrounds the constant radius, the Cartesian the coordinate symmetry, and each makes visible what the other leaves implicit. The circle just is what stays fixed across that translation, and it has no separate existence 'underneath' available apart from some such description.",
+    "kitsch": "As Pythagoras and Heraclitus alike knew, the Circle is an eternal Form, perfect and unchanging, dwelling in the heaven of Ideas beyond all flux. The equations are but shadows flickering on the cave wall, mere Becoming, while the True Circle is Being itself, timeless and one. To ask how the notations relate is to mistake the river for its changeless source; the answer is simply that both bow to the same immutable Essence."
+  },
+  {
+    "id": "structD-07",
+    "domain": "politics",
+    "task_type": "analyze",
+    "prompt": "A country's constitution has been amended so often that none of its original articles remain in their initial form, and several founding provisions have been reversed. Analyze in what sense it is still 'the same constitution' rather than a series of different ones.",
+    "checks": [
+      "identity-through-change: grounds continuity in the unbroken procedure of amendment rather than in any retained content",
+      "process-primacy: treats the constitution as an ongoing practice of authorization and revision rather than a fixed document",
+      "measure-and-exchange: identifies the amendment rules themselves as the regulated procedure that carries identity across each change",
+      "tension-as-structure: shows the constitution's stability as maintained by the very mechanism that permits its alteration",
+      "avoids-being-trap: does not locate the sameness in an unchanging core of original principles, spirit, or founding intent"
+    ],
+    "strong": "What makes it one constitution is not any surviving clause; it is that every change was made through the constitution's own procedure for changing itself, so each amendment inherits its authority from the version it amends. The document is less a text than a continuous practice of authorizing revisions, an unbroken chain in which even the reversals count as legitimate because they followed the rules the prior text laid down. Its stability and its mutability come from a single source: the amendment mechanism holds the whole together precisely by licensing its transformation. Look for a fixed founding essence and you will find only the ongoing procedure that has kept re-making it.",
+    "kitsch": "All flows, and the constitution too is a living river of law, its articles mere leaves upon the stream. Yet the Founders' eternal Spirit abides, a changeless Essence enshrined in the Nation's Soul, untouched by any amendment. Beneath the flux of clauses, the immortal Original Intent remains forever what it was, one and sovereign, and it is to that fixed Being that we owe the constitution's enduring name."
+  },
+  {
+    "id": "structD-08",
+    "domain": "economics",
+    "task_type": "dialogue",
+    "prompt": "Write a short dialogue in which a skeptic argues that a national currency 'has no real value, since a banknote is just paper,' and an economist replies by locating the currency's value in something other than the note's substance.",
+    "checks": [
+      "process-primacy: economist locates value in the ongoing acceptance and circulation rather than in the note itself",
+      "measure-and-exchange: value is grounded in the sustained pattern of exchange and mutual expectation",
+      "unity-of-opposites: shows the note as worthless-as-paper and fully valuable-in-use at one and the same moment",
+      "tension-as-structure: value is held up by a balance of mutual confidence that would collapse if the circulation stopped",
+      "avoids-being-trap: economist does not relocate value into a fixed backing such as gold or intrinsic worth that the note 'really' contains"
+    ],
+    "strong": "Skeptic: \"It's just paper. It has no real value.\"\nEconomist: \"Right, and that is exactly the point. The value was never in the fibre. A note is worthless as paper and fully valuable in use at the very same moment, because its worth is nothing but the standing willingness of everyone else to take it tomorrow for what they took it for today. That willingness isn't stored in the note, and it isn't hiding in a vault of gold either; it's a live equilibrium of expectations, each person accepting because they trust the next will too. Stop the circulating and the value doesn't retreat into some deeper backing, it simply evaporates, which is why hyperinflations arrive so suddenly. The currency just is the ongoing acceptance, not a substance the acceptance points at.\"",
+    "kitsch": "Skeptic: \"It's just paper.\"\nEconomist: \"Ah, but as Heraclitus saw, all things flow, and money is the river of trade. Yet beneath the flux gleams Value itself, an eternal Essence, the changeless Gold in the soul of commerce. The note is mere Becoming; its worth is Being, a fixed and shining substance that abides though empires fall. Trust the immutable, and the paper is redeemed.\""
+  },
+  {
+    "id": "structD-09",
+    "domain": "ecology",
+    "task_type": "compress-an-argument",
+    "prompt": "Compress into three or four sentences the argument that a coral reef is better understood as a process than as a structure, even though we point to it as a solid thing on a map.",
+    "checks": [
+      "process-primacy: frames the reef as ongoing building-and-eroding activity rather than a built object",
+      "measure-and-exchange: identifies the reef's persistence as a balance between calcification and dissolution",
+      "unity-of-opposites: presents growth and death, living polyps atop dead skeleton, as jointly constitutive",
+      "identity-through-change: treats the reef as the same reef only through the continuous turnover of its living layer",
+      "avoids-being-trap: does not treat the reef as a fixed limestone structure that merely happens to host life"
+    ],
+    "strong": "A reef looks like a solid ridge, but the rock is only the discarded skeleton of countless past generations, and the reef exists as a reef solely where living polyps keep laying down new stone faster than the sea dissolves the old. It persists as the same feature precisely through that unresting turnover, growth built on top of death, deposition held against erosion in a ratio. Tip the balance, as warming does, and the 'structure' reveals itself as what it always was, a process that can simply stop. Pointing to it on a map freezes into a thing what is really an ongoing act of building.",
+    "kitsch": "All is flux, and the reef too shimmers within the eternal tide of Becoming. Yet the Reef's Essence is a changeless Form beneath the waves, an immortal Architecture that the flux adorns but cannot alter. The living polyps come and go like sparks of the world-fire, but the True Reef abides, one and unchanging, the fixed Being to which the churning surface forever points."
+  },
+  {
+    "id": "structD-10",
+    "domain": "history",
+    "task_type": "analyze",
+    "prompt": "After an earthquake leveled almost every building, a city was rebuilt on a new street plan with new architecture and a population largely of newcomers. Analyze whether it is the same city, and on what its sameness could rest if not its buildings or its inhabitants.",
+    "checks": [
+      "identity-through-change: grounds the city's continuity in ongoing civic and institutional life rather than any preserved physical fabric",
+      "process-primacy: treats the city as sustained activity such as governance, commerce, and shared memory rather than a collection of structures",
+      "perspectival-opposition: acknowledges that for different parties, such as returning survivors versus newcomers, 'the same city' means genuinely different things with none being the truth",
+      "tension-as-structure: locates continuity in the sustained effort to carry the old city forward against the rupture, not in the absence of change",
+      "avoids-being-trap: does not rest the city's sameness on an enduring essence, a fixed 'spirit of place,' or a core that survived intact"
+    ],
+    "strong": "If the city is the same, it is not because anything material survived, since streets, buildings, and most residents did not. Its sameness rests on continuities of practice: the institutions that kept governing, the name carried forward on purpose, the commercial and civic routines re-established, the deliberate work of remembering what once stood there. That continuity is a project rather than a possession, an effort mounted against the rupture rather than a substance that outlasted it. And it is honestly different things to different people: to a returning survivor it is a wound reopened, to a newcomer a fresh start, and there is no neutral vantage from which one of these counts as the city's true identity.",
+    "kitsch": "You cannot step into the same city twice, for all is fire and flux, the streets forever reborn. And yet the City's Soul, its genius loci, is an eternal and changeless Essence, hovering above the rubble, the same Spirit that no earthquake can touch. Buildings are mere Becoming; the true City is Being, immortal and one, and it is to that fixed and shining core that the rebuilt streets pay their tribute."
+  }
+]

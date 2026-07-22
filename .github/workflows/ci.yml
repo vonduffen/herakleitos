@@ -19,5 +19,15 @@ jobs:
         run: uv run ruff check .
       - name: Rebuild corpus from committed raw sources (determinism check)
         run: uv run python -m corpus.build_corpus --check
+      - name: Rebuild gold set (determinism check)
+        run: |
+          uv run python -m evals.goldset.build_goldset --check
+          uv run python -m evals.goldset.build_discrimination --check
+      - name: Gold-set decontamination guard
+        run: uv run python -m evals.decontaminate --self-check
       - name: Tests (includes smoke evals)
         run: uv run pytest -q
+      - name: Smoke eval (offline, mock backend)
+        run: |
+          uv run python -m evals.calibrate --backend mock --limit 3 >/dev/null
+          uv run python -m evals.report --candidate mock --judge mock --limit 2 >/dev/null

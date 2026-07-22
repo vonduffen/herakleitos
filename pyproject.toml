@@ -5,7 +5,9 @@ description = "Pipeline for training a small model that reasons like Heraclitus 
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
-dependencies = []
+dependencies = [
+    "httpx>=0.28.1",
+]
 
 [dependency-groups]
 dev = [

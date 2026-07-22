@@ -1,0 +1,31 @@
+# Judge/model backends. Frontier backends: OFFLINE GRADING ONLY (MODELS.md).
+# Model choices marked "decision pending" await the human call recorded in the
+# build plan's open decisions; update here, nowhere else.
+
+[backends.frontier1]
+kind = "anthropic"
+model = "claude-opus-4-8"        # decision pending
+api_key_env = "ANTHROPIC_API_KEY"
+
+[backends.frontier2]
+kind = "openai"
+base_url = "https://api.openai.com/v1"
+model = "gpt-5.2"                # decision pending (must be a non-Anthropic provider)
+api_key_env = "OPENAI_API_KEY"
+
+[backends.openweights_judge]
+# Datagen filter gate + runtime-grader distillation teacher. Must be a
+# DIFFERENT FAMILY from the teacher below (separation of powers).
+kind = "openai"
+base_url = ""                    # decision pending (API provider or self-hosted)
+model = "qwen3-235b-a22b"        # decision pending; verify Apache-2.0 on the exact checkpoint
+api_key_env = "OPENWEIGHTS_JUDGE_API_KEY"
+
+[backends.teacher]
+kind = "openai"
+base_url = ""                    # decision pending
+model = "deepseek-v4"            # decision pending; verify MIT on the exact checkpoint
+api_key_env = "TEACHER_API_KEY"
+
+[backends.mock]
+kind = "mock"

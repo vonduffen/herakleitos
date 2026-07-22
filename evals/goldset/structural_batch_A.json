@@ -1,0 +1,147 @@
+[
+  {
+    "id": "structA-01",
+    "domain": "technology",
+    "task_type": "analyze",
+    "prompt": "A payments company's public 'v1' API has kept the same request/response contract for eleven years. Behind it, the implementation has been rewritten four times — different languages, databases, and teams, with essentially zero shared code between the first version and the current one. Engineers say 'it's still the v1 API.' Analyze in what sense that claim is true.",
+    "checks": [
+      "identity-through-change: locates the API's identity in the persisting behavioral contract rather than in any persisting code or infrastructure.",
+      "process-primacy: treats the API as something continuously enacted by request-handling rather than a static object that merely exists.",
+      "unity-of-opposites: shows that the internal turnover and the external sameness are two sides of one activity, mutually dependent rather than opposed.",
+      "avoids: does not treat the 'real' API as an unchanging specification or essence sitting behind the implementations."
+    ],
+    "strong": "The v1 API is neither the code nor a spec document; it is a commitment that certain inputs keep yielding certain outputs, a pattern that exists only while requests are actually being served. Each rewrite was not a threat to that identity but the means of preserving it: holding the observable behavior fixed under growing load and new attacks is exactly what forced the guts to be replaced. Sameness at the boundary and constant replacement inside are therefore one situation, not a stable core plus disposable wrapping. If the servers stopped handling calls there would be no 'v1 API' still sitting somewhere — the identity lives in the ongoing honoring of the contract, not in a thing that possesses it.",
+    "kitsch": "Everything flows, and this API too is a river we can never step into twice — the code churns endlessly beneath a timeless Form. Yet the eternal Contract abides, an unchanging Essence to which each mortal implementation is but a fleeting shadow. The Logos of v1 is fixed and perfect; the versions come and go, but the True Specification remains forever what it always was."
+  },
+  {
+    "id": "structA-02",
+    "domain": "relationships",
+    "task_type": "dialogue",
+    "prompt": "Write a short dialogue between a therapist and a client who says: 'Our marriage ended two years ago, but my ex and I now run a tighter parenting partnership than we ever did while married. So did the relationship end, or not?' The therapist should reason structurally about identity and change rather than offer generic comfort.",
+    "checks": [
+      "identity-through-change: locates the relationship's continuity in an evolving pattern of coordination rather than in the marital form that ended.",
+      "unity-of-opposites: holds 'ended' and 'continuing' together as both true of one relationship rather than choosing one.",
+      "process-primacy: frames the relationship as an ongoing activity of coordination rather than a state that is simply present or absent.",
+      "tension-as-structure: presents the divorce as a reconfiguration the partnership is now built on rather than damage to be resolved.",
+      "avoids: does not posit a single fixed 'the relationship' that either survived intact or was destroyed."
+    ],
+    "strong": "Therapist: 'Nothing about this needs to be either 'ended' or 'still going,' because there was never one fixed thing sitting there — only a way you two keep coordinating, and that has been changing the entire time.' Client: 'So the marriage was just a phase of it?' Therapist: 'The marriage was one arrangement of the same ongoing effort to raise these kids and deal with each other; when that arrangement stopped working you didn't end the effort, you re-shaped it around a new footing.' Client: 'Then why does 'it ended' still feel true?' Therapist: ''Ended' and 'still going' are both accurate because they name different layers of one moving thing — not a contradiction you have to solve, just the actual shape of what you have.'",
+    "kitsch": "Therapist: 'You know, you can't step in the same river twice — your love simply flows onward, ever-changing yet eternal.' Client: 'So it's still there?' Therapist: 'At its core, yes: beneath all the change lies the unchanging essence of your bond, a timeless flame no divorce can extinguish.' Client: 'That's comforting.' Therapist: 'What you truly are to each other was fixed long ago and abides forever, untouched by the surface storms.'"
+  },
+  {
+    "id": "structA-03",
+    "domain": "organizations",
+    "task_type": "respond-to-challenge",
+    "prompt": "A critic says of a volunteer search-and-rescue team: 'Every member from the founding is gone, the equipment is different, the bylaws have been rewritten twice, and even the callsign changed. Calling it 'the same team since 1974' is just sentimental branding — there's no real continuity here.' Respond structurally, without conceding that the continuity is merely a story.",
+    "checks": [
+      "identity-through-change: locates the team's identity in a transmitted practice and role-structure that outlives any member or asset.",
+      "process-primacy: treats the organization as continuous training-and-response activity rather than a roster or a legal shell.",
+      "measure-and-exchange: describes continuity as a regulated flow — members trained in as others age out, in a matched ratio — rather than fixed parts.",
+      "avoids: does not relocate the 'real' team into an unchanging founding charter, core-member set, or essence."
+    ],
+    "strong": "The team's identity was never in its people, gear, or bylaws; it is a self-renewing practice — the way skills, standards, and a structure of roles get handed from those leaving to those arriving. Continuity here is an achievement of exchange: each year some members age out and new ones are trained into the same slots at roughly the rate needed to keep coverage, so the pattern persists precisely because the material keeps flowing through it. Nothing in it stands still, and that is why it can last — a team that refused all turnover would simply have died with its founders. To call it the same team is not sentiment about a preserved object but an accurate description of an unbroken transmission.",
+    "kitsch": "Everything changes, as the ancients knew, yet the Spirit of the Team endures eternal — the faces flow past like water, but the immortal Soul of the Brigade remains. All is flux; still, the founding Ideal shines unchanged, a fixed star guiding each new generation of hands. The essence was set in 1974 and abides forever, and that is the real team the critic cannot see."
+  },
+  {
+    "id": "structA-04",
+    "domain": "nature",
+    "task_type": "analyze",
+    "prompt": "A crescent-shaped barchan dune in a desert 'travels' several meters a year downwind: wind lifts grains off the windward slope and drops them on the leeward slope, so that over a decade essentially none of the original sand remains, yet surveyors track it as one named, persisting dune with a stable shape. Analyze what makes it one enduring dune.",
+    "checks": [
+      "identity-through-change: locates the dune's identity in the persisting form rather than in the sand that composes it.",
+      "process-primacy: treats the dune as an ongoing event of grain-transport rather than a heap of matter that happens to shift.",
+      "unity-of-opposites: shows the dune's stability and its motion are the same fact — it holds its shape only by moving material through itself.",
+      "measure-and-exchange: describes the steady shape as a balance of grains arriving and grains leaving in matched proportion.",
+      "avoids: does not treat the 'real' dune as a fixed body of sand or seek an unchanging substrate beneath the movement."
+    ],
+    "strong": "The dune is not a lump of sand but a shape that sand passes through — a standing arrangement maintained by the constant handoff of grains from windward to leeward face. Its famous stability of form and its downwind travel are not two properties but one: it keeps its crescent only because material is perpetually stripped from behind and deposited ahead in balanced measure. Ask which grains are 'the dune' and no stable answer comes, because being made of any particular grains was never what made it that dune. What endures is a self-maintaining process; the sand is merely what it is currently made of, already on its way to being made of other sand.",
+    "kitsch": "The sands flow ever onward, for as the river teaches, nothing abides — and yet the eternal Form of the dune stands serene above the flux. Beneath the shifting grains lies the dune's true Essence, a timeless shape unmoved by the coming and going of mere matter. All flows, but the Ideal endures, perfect and changeless, and that Ideal is what the surveyors are really tracking."
+  },
+  {
+    "id": "structA-05",
+    "domain": "personal_identity",
+    "task_type": "compress-an-argument",
+    "prompt": "Compress into three sentences the strongest case that a person who lost most autobiographical memory to encephalitis, and has spent years rebuilding a sense of self from others' accounts and new experience, is continuous with the person before the illness — without appealing to a soul, a fixed core self, or the mere persistence of the brain as the answer.",
+    "checks": [
+      "identity-through-change: locates continuity in an ongoing self-assembling activity rather than in retained memories or an inner core.",
+      "process-primacy: treats the self as something continuously enacted rather than a stored entity that was lost and refound.",
+      "unity-of-opposites: holds the person as at once a break (memories gone) and a continuation (the self-making did not) without resolving it away.",
+      "avoids: does not ground the answer in a persisting substrate — soul, core self, or brain — treated as the real bearer of identity."
+    ],
+    "strong": "Selfhood was never a stored archive that the illness deleted; it is the continuous activity of assembling a coherent person out of whatever materials are at hand — once firsthand memories, now others' testimony and fresh experience — and that assembling never stopped. She is continuous not because something inner survived intact but because the same ongoing project of being-someone carried straight across the break, taking the break itself up as new material. That she is at once a discontinuity, since the memories are gone, and a continuation, since the self-making did not, is not a paradox to dissolve but the actual shape of a self.",
+    "kitsch": "Though memory flows away like water, the true Self remains — for beneath the tides of forgetting lies an unchanging essence, the soul's own signature that no illness can erase. All things flux, yet the inner Person abides eternal and whole, waiting patiently to be uncovered again. Her core was always there beneath the wreckage, and recovery is simply its rediscovery."
+  },
+  {
+    "id": "structA-06",
+    "domain": "mathematics",
+    "task_type": "respond-to-challenge",
+    "prompt": "A mathematician challenges you: 'The Pythagorean theorem has hundreds of proofs — geometric dissection, similar triangles, calculus, linear algebra — sharing no common argument. So either there is one eternal truth the proofs merely point at, or 'the theorem' is just a label we slap on unrelated results. Which is it?' Respond structurally, rejecting both horns.",
+    "checks": [
+      "identity-through-change: locates the theorem's identity in an invariant relation realized differently across proofs, not in any single derivation.",
+      "unity-of-opposites: dissolves the either/or by showing the one relation and its many enactments are aspects of one thing rather than rival answers.",
+      "process-primacy: treats the theorem as living in being proved and used across contexts rather than as an inert eternal object pointed at from afar.",
+      "avoids: does not resolve the puzzle by positing a static eternal truth existing independently of any proof or use as the real theorem."
+    ],
+    "strong": "The theorem is neither a free-floating eternal object nor a mere label — it is an invariant relation among the sides of a right triangle that shows up intact under wildly different ways of exhibiting it. Its identity just is that stability-across-methods: what makes the calculus proof and the dissection proof prove 'the same' thing is that they converge on one constraint, and that convergence is not a sign of some separate item hiding behind them, it is what the theorem's existence consists in. The many proofs are not fingers pointing at a distant moon; they are the diverse activity in which the single relation keeps getting re-instantiated and kept alive. Here sameness and multiplicity are one situation, not two options you must choose between.",
+    "kitsch": "Ah, but the many are one and the one is many — the proofs are ever-flowing rivers, yet they all pour into the timeless Ocean of Truth. The eternal Theorem sits enthroned beyond the flux, perfect and unchanging, while mortal proofs flicker below like passing flames. It simply is, forever, exactly as it always was, and every proof is our brief glimpse of that changeless perfection."
+  },
+  {
+    "id": "structA-07",
+    "domain": "politics",
+    "task_type": "respond-to-challenge",
+    "prompt": "A national political party that a century ago championed protectionism, isolationism, and expanded federal power now champions free trade, foreign intervention, and states' rights — a near-total reversal — yet insists it is the same party with an unbroken tradition. A critic says this proves party identity is a fiction used to launder betrayal. Respond structurally, without conceding that the continuity is fake.",
+    "checks": [
+      "identity-through-change: locates party identity in a continuous institutional lineage rather than in a fixed set of positions.",
+      "process-primacy: treats the party as an ongoing coalition-building activity rather than a doctrine that either stays put or is abandoned.",
+      "perspectival-opposition: shows how 'same party' and 'opposite positions' are both true because read off different dimensions, organizational and programmatic.",
+      "unity-of-opposites: presents the reversal of stances as itself a mode of the party persisting rather than as its death.",
+      "avoids: does not make an unchanging ideological essence or founding creed the criterion of real identity."
+    ],
+    "strong": "A party is not a fixed platform but a durable vehicle for assembling winning coalitions, and such vehicles persist precisely by trading positions as the electoral ground shifts beneath them. Its continuity runs through an unbroken chain of organizations, contests, and inheritances of the name and machinery — a lineage — while its stances are the changing content it passes through in order to stay viable. Calling it the same party tracks that lineage; noting the reversed positions tracks its program; both are true because they read off different dimensions of one moving institution, not a lie about a single one. The reversal is not the party betraying itself but the very way an enduring coalition keeps existing when the terrain flips under it.",
+    "kitsch": "Though its policies flow and change like the eternal river, the Soul of the Party remains forever — for beneath the shifting slogans burns an undying Founding Spirit, pure and unchanged since its birth. All is flux, yet the party's timeless Essence abides untouched by the passing quarrels of the age. What it truly is was fixed at the creation and endures eternal, and that is the continuity the critic is too shallow to perceive."
+  },
+  {
+    "id": "structA-08",
+    "domain": "economics",
+    "task_type": "dialogue",
+    "prompt": "Write a short dialogue between a student and an economist. The student says: 'A stable currency has stored value — that's what makes it money. The bills in my wallet just sit there holding worth.' The economist should reason structurally to reframe stored value as something else, without lapsing into cliche.",
+    "checks": [
+      "process-primacy: reframes a currency's value as sustained by ongoing circulation and acceptance rather than sitting inertly stored in the notes.",
+      "measure-and-exchange: explains stable value as a maintained ratio in continuous exchange rather than a quantity locked in the object.",
+      "tension-as-structure: presents monetary stability as an actively balanced condition, opposing pressures held, rather than a resting state.",
+      "avoids: does not treat value as an intrinsic property residing in the money-object itself."
+    ],
+    "strong": "Student: 'So the worth is inside the bill, right? It's stored there.' Economist: 'Nothing is inside it — a banknote holds value only while people keep accepting it in exchange; stop the circulation and the 'stored' worth evaporates overnight, as anyone living through a currency collapse learns fast.' Student: 'Then why does it feel so stable?' Economist: 'Because that stability is being produced continuously: a balance of pressures pushing prices up and down, and a roughly steady ratio of money to goods that institutions and millions of daily transactions keep re-establishing.' Student: 'So the stillness is fake?' Economist: 'The stillness is real but it's a fast equilibrium being actively held, not a substance parked in your pocket.'",
+    "kitsch": "Student: 'So the worth is stored in the bill?' Economist: 'Well, all things flow — money too is an ever-flowing river.' Student: 'So it isn't in there?' Economist: 'Ah, but beneath the flux lies its eternal, intrinsic Value, a fixed essence the coin carries within, unchanged through all the ages of trade.' Student: 'So it really is inside it.' Economist: 'Yes — the timeless substance of worth abides in the metal itself, forever, however the surface may churn.'"
+  },
+  {
+    "id": "structA-09",
+    "domain": "language",
+    "task_type": "analyze",
+    "prompt": "The English word 'nice' once meant 'foolish, ignorant,' then 'precise,' then 'agreeable'; some words even drift to mean their own opposite. A prescriptivist insists each word has a correct fixed meaning that usage corrupts. Analyze what a word's meaning actually is, given cases where it inverts over time yet the word is still counted as 'the same word.'",
+    "checks": [
+      "process-primacy: treats a word's meaning as constituted by ongoing use in a community rather than by a fixed definition it possesses.",
+      "identity-through-change: locates the word's continuity in an unbroken chain of transmission and use rather than in a stable meaning.",
+      "perspectival-opposition: uses the coexistence of opposed meanings across speakers and eras as structural rather than as error.",
+      "unity-of-opposites: shows how a word can travel to its opposite while remaining itself, because sameness lives in the usage-lineage, not the sense.",
+      "avoids: does not posit a correct, fixed, essential meaning that change merely degrades."
+    ],
+    "strong": "A word's meaning is not a definition it carries around but the current settlement of how a community uses it — a settlement always being renegotiated, one exchange at a time. That is why 'nice' could travel from 'ignorant' all the way to 'agreeable' and still be one word: its identity rides on the unbroken chain of people learning it from earlier speakers and passing it on, not on any sense holding still. At any given moment different speakers and generations pull it in partly opposed directions, and that spread is not corruption but the very medium in which meaning lives and moves. The prescriptivist's 'correct meaning' is just one past snapshot of this process, mistaken for its fixed essence.",
+    "kitsch": "Though words flow and shift like the eternal river, each true word possesses an eternal, correct Meaning — a pure Form from which usage sadly falls away. All is flux; yet the real sense abides unchanged, and it is our duty to guard that timeless essence against the tides of decay. The word's soul was fixed at its origin, and every later 'sense' is only a shadow of that changeless truth."
+  },
+  {
+    "id": "structA-10",
+    "domain": "art",
+    "task_type": "compress-an-argument",
+    "prompt": "Compress into three sentences the strongest account of what 'the ballad' is, given a folk song sung for three hundred years with no written original, no canonical version, and thousands of variant tellings that change constantly — so that the version sung today shares almost no exact lines with the earliest one recorded. Do not locate the song in any single authentic version or lost original.",
+    "checks": [
+      "identity-through-change: locates the ballad's identity in a continuous lineage of variation rather than in any fixed text or original.",
+      "process-primacy: treats the ballad as an ongoing activity of transmission-and-reworking rather than an object that merely has variants.",
+      "measure-and-exchange: frames continuity as a balance of preservation and innovation traded in each retelling that keeps it recognizable as it moves.",
+      "unity-of-opposites: shows fidelity and alteration are not opposed here — the song stays itself by being changed each time it is passed on.",
+      "avoids: does not treat a lost original or a single authentic version as the real ballad that the variants approximate."
+    ],
+    "strong": "The ballad is not any text but a living lineage of retellings, each descended from earlier ones and handed to later ones, held together by descent rather than by shared words. It persists through a working balance struck in every performance — enough kept to stay recognizable, enough changed to stay alive — so that fidelity and alteration are not rivals but the paired motions by which it travels through time. There is no authentic version and no original to recover, because the song was always this process of variation, never a fixed thing the variants imperfectly copy.",
+    "kitsch": "Though the melody flows ever onward, never sung the same way twice, the ballad's eternal Soul endures beneath the changing words. All things flow — yet somewhere the pure, original Song abides, timeless and perfect, and every version is but a fading echo of that lost ideal. Its true essence was there at the source, unchanged forever, and to sing it well is to reach back toward that changeless original."
+  }
+]

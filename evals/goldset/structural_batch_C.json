@@ -1,0 +1,149 @@
+[
+  {
+    "id": "structC-01",
+    "domain": "technology",
+    "task_type": "analyze",
+    "prompt": "A programming language has gone through fifteen major versions over two decades. The syntax, standard library, memory model, and even several core keywords have all changed; almost no program written for version 1 runs unmodified today. Analyze in what sense it is still 'the same language.'",
+    "checks": [
+      "identity-through-change: locates the language's identity in the continuous, rule-governed line of revision and community practice rather than in any fixed feature set",
+      "process-primacy: treats the language as an ongoing activity of maintenance, revision, and use rather than a static specification",
+      "measure-and-exchange: notes that change is governed by constraints (deprecation cycles, compatibility budgets, governance) that regulate how old constructs are swapped for new ones",
+      "does not / avoids being-over-becoming: does not claim there is a single unchanging core or essence that all versions preserve untouched"
+    ],
+    "strong": "The language stays itself not because some kernel of syntax survives intact—none does—but because each version is produced by revising the one before it under shared constraints: a governance process, a deprecation discipline, and a community that carries idioms forward and rewrites its own code to keep up. Its identity is the trajectory, not a snapshot; 'same language' names the continuous, rule-governed exchange of old constructs for new ones, where the manner and rate of change are themselves what persist across versions. Ask where the language 'is' and the honest answer is that it lives in the ongoing work of maintaining and migrating it, not in any feature you could point to and call essential.",
+    "kitsch": "Like a great river, the language flows ever onward yet remains eternally itself, for beneath the shifting waters of syntax lies an immutable Essence, the timeless Spirit of the Language that no mere version can touch. As Heraclitus taught, all things change, yet the true Form endures unchanged at the still center. Version fifteen is but a fresh garment draped over the same undying soul."
+  },
+  {
+    "id": "structC-02",
+    "domain": "relationships",
+    "task_type": "dialogue",
+    "prompt": "Answer this person directly: 'Our friend group started as six people in college. Over ten years, three moved away and drifted off, and two newer people joined through my partner. Sometimes I wonder if it's even our group anymore or just a different group I'm calling by the old name. Is there a real answer?'",
+    "checks": [
+      "identity-through-change: locates the group's sameness in the continuous overlapping membership and shared practices, not in a fixed roster",
+      "process-primacy: frames the group as an ongoing pattern of gathering and relating rather than a thing with a stable list of members",
+      "unity-of-opposites: shows that 'the same group' and 'a different group' are both true at once and not a contradiction",
+      "perspectival-opposition: acknowledges the answer shifts depending on which continuity the person weights",
+      "does not / avoids being-over-becoming: does not posit an essential founding core or original membership that alone makes it 'really' the group"
+    ],
+    "strong": "There's a real answer, but it isn't yes-or-no. A group like yours isn't a fixed set of people; it's a repeated activity—the way you gather, the running jokes, the sense of who shows up for whom—and that activity has continued without a break even as the particular people rotated through. So it is genuinely the same group (the thread never snapped) and genuinely a different one (almost no gathering now holds all the same faces), and both are true because 'same' here tracks continuity of the pattern, not sameness of the roster. Which description feels right depends on what you weight: keep the original six as your measure and it reads as a faded version; weight the living practice and it's simply your group, still going.",
+    "kitsch": "Ah, but you cannot step into the same friendship twice—the faces are as waves upon the water, forever coming and going. Yet fear not, for the true Group is an eternal flame passed from hand to hand, its essential Spirit undimmed no matter who holds the torch. What you call 'the group' is really its unchanging inner Essence, which no departure can diminish and no newcomer can alter."
+  },
+  {
+    "id": "structC-03",
+    "domain": "organizations",
+    "task_type": "compress-an-argument",
+    "prompt": "In 2-3 sentences, compress the following point: a neighborhood mutual-aid network has completely replaced its coordinators, changed its meeting place, and shifted from food delivery to eviction defense over eight years, yet residents insist it is the same organization. Compress why they are right.",
+    "checks": [
+      "identity-through-change: locates identity in the unbroken continuity of relationships and function across fully replaced parts",
+      "process-primacy: frames the organization as an ongoing activity of adaptation, not a fixed structure or roster",
+      "measure-and-exchange: notes the orderly handoff or substitution (coordinators training replacements, focus growing out of prior work) that preserves continuity",
+      "does not / avoids being-over-becoming: does not appeal to an unchanging mission-essence or founding charter as the 'real' organization"
+    ],
+    "strong": "The network is the same not because anything about it stayed put but because each change was handed off through the one before it: coordinators trained their replacements, and the shift in focus grew directly out of the same relationships responding to what the block now needed. Its identity lives in that unbroken chain of adaptation and mutual obligation, not in a roster, a room, or a task. Continuity of the work is exactly what 'same organization' means here.",
+    "kitsch": "Though all its parts have flowed away like a river to the sea, the mutual-aid network endures, for it is animated by an eternal Idea that transcends mere coordinators and causes. As the ancients knew, the Many change but the One remains: the timeless Mission burns on, its sacred Essence untouched by the turning of the years. That undying core is the true organization."
+  },
+  {
+    "id": "structC-04",
+    "domain": "nature",
+    "task_type": "analyze",
+    "prompt": "Analyze the identity of a whirlpool that persists at a bend in a fast river for weeks. No parcel of water stays in it for more than a moment, yet we point to 'that whirlpool' day after day. What kind of thing is it?",
+    "checks": [
+      "process-primacy: identifies the whirlpool as a pattern or process sustained by flow, not a substance that merely holds water",
+      "identity-through-change: shows its very persistence depends on the constant replacement of its material",
+      "tension-as-structure: locates its form in a standing balance of opposing forces (current versus obstruction) held without resolution",
+      "measure-and-exchange: notes the matched rate of inflow and outflow that maintains the form",
+      "does not / avoids being-over-becoming: does not treat it as a fixed object or unchanging form that merely has changing contents"
+    ],
+    "strong": "The whirlpool isn't an object that happens to be made of water; it's a stable form the water is continuously passing through. Its persistence is made of change: it exists only because water keeps entering and leaving at a matched rate, and it would vanish the instant the flow stopped. What holds it in place is a standing tension between the river's push and the obstruction at the bend, so its shape is the ongoing, never-settled outcome of those opposed forces rather than a thing in its own right. 'That whirlpool' names a process that keeps its form precisely by never keeping its matter.",
+    "kitsch": "Behold the whirlpool, ever-changing yet ever the same. Though Heraclitus reminds us that all flows, the whirlpool's true Being abides beneath the churning surface, an eternal Form imposed upon the chaos of the waters. It is a still point of unchanging Essence, a fixed Idea that the fleeting water merely clothes for a moment before passing on."
+  },
+  {
+    "id": "structC-05",
+    "domain": "personal_identity",
+    "task_type": "dialogue",
+    "prompt": "Answer this person directly: 'For years I thought of myself as a shy person. Lately I realize I'm often the one starting conversations. Was my old self-image wrong, or did I actually change? I can't tell which, and it's unsettling.'",
+    "checks": [
+      "identity-through-change: treats the self as constituted through its changing conduct rather than a fixed trait that a label either matched or missed",
+      "unity-of-opposites: shows 'I always had it in me' and 'I genuinely changed' need not be rivals",
+      "process-primacy: frames selfhood as an ongoing activity of acting and reinterpreting, not a hidden fixed disposition",
+      "perspectival-opposition: notes that 'shy' and 'outgoing' can describe the same person under different circumstances and readings",
+      "does not / avoids being-over-becoming: does not hunt for a 'true self' that was there all along beneath the labels"
+    ],
+    "strong": "The unsettling part comes from assuming there's a fact of the matter—one real, fixed you that the word 'shy' either matched or didn't. But a trait like shyness isn't a hidden object you can misread; it's a summary of how you've tended to act, and how you act is exactly what has been shifting. So both stories are true and they don't compete: you probably always had the capacity to initiate, and you've genuinely become someone who does it, because doing it repeatedly is what changing into it consists of. 'Shy' wasn't wrong so much as a description that stopped keeping up with you—and noticing that lag is itself part of how a self keeps revising itself.",
+    "kitsch": "Do not be troubled—you are merely rediscovering your Authentic Self, the unchanging soul that was always there beneath the mask of shyness. As the sages teach, the outer person may flow and shift like water, but the true inner Essence remains eternal and fixed. Your real nature never changed; you have only peeled away the illusion to reveal the timeless You that was waiting all along."
+  },
+  {
+    "id": "structC-06",
+    "domain": "mathematics",
+    "task_type": "respond-to-challenge",
+    "prompt": "Respond to this challenge: 'The limit of a sequence is just a fixed number sitting at the end of the process. All this talk of 'approaching' is psychological color. Mathematically the value is a static object, defined once and for all, and the process is irrelevant to what it is.'",
+    "checks": [
+      "process-primacy: shows the limit is constituted by the process of approach rather than a terminal object the process merely reaches",
+      "identity-through-change: shows the value's identity is fixed precisely by how the terms change and converge",
+      "unity-of-opposites: holds together that the limit is both a perfectly fixed number and inseparable from an unending process",
+      "measure-and-exchange: appeals to the epsilon-delta structure as a rule of proportion governing the approach",
+      "does not / avoids being-over-becoming: does not concede the limit is a self-standing object whose definition makes no reference to change"
+    ],
+    "strong": "The challenge has it backwards: the number isn't sitting at the end of the process, it's defined by the process. The epsilon-delta definition mentions no terminal object; it says only that for every tolerance you name, the terms eventually stay within it—a statement purely about how the sequence changes. So the limit is at once a perfectly fixed value and something whose entire meaning is the pattern of approach: delete the 'approaching' and you haven't isolated the value, you've erased its definition. Being a fixed number and being constituted by an unending process aren't in tension here; the first is precisely what the second establishes.",
+    "kitsch": "The challenger forgets that all is flux—and yet the wise mathematician knows that above the restless stream of terms floats the eternal Limit, a perfect and changeless Form in the Platonic heaven. As Heraclitus glimpsed but Pythagoras perfected, the sequence merely gropes toward this timeless Number, which rests in serene fixity, wholly independent of the striving below."
+  },
+  {
+    "id": "structC-07",
+    "domain": "politics",
+    "task_type": "analyze",
+    "prompt": "A country's written constitution has barely been amended in 150 years, yet what it permits and forbids—on speech, on privacy, on who counts as a full citizen—has changed enormously through reinterpretation. Analyze whether it is still 'the same constitution.'",
+    "checks": [
+      "identity-through-change: locates identity in the continuous practice of interpretation rather than in a frozen text or original meaning",
+      "process-primacy: frames the constitution as an ongoing activity of application rather than a static document",
+      "unity-of-opposites: treats the text's stability and its meaning's mutation as two aspects of one thing, not a contradiction",
+      "perspectival-opposition: notes that originalist and living readings weight different continuities, both genuinely present",
+      "does not / avoids being-over-becoming: does not locate the 'real' constitution in a fixed original meaning that later readings betray or merely uncover"
+    ],
+    "strong": "A constitution isn't the marks on the parchment; it's the ongoing practice of a community deciding, case by case, what those marks require of it. The text has held still precisely because its meaning has kept moving—the stability of the words and the mutation of their application aren't opposed but are how a durable document stays usable under changed conditions. So it is the same constitution in the only sense that matters: an unbroken tradition of argument in which each new reading answers to the last. Whether you call that fidelity or drift depends on which continuity you privilege—the fixed wording or the living practice—and both are really there.",
+    "kitsch": "The Constitution endures because it rests upon an eternal Foundation: the fixed and sacred Original Meaning breathed into it by the Founders, immutable as the stars. Though the river of history rushes past, the true Constitution stands unmoved, and every legitimate reading merely brushes the dust from its timeless Essence. What changes is only our clouded perception; the document's real nature was settled forever at its birth."
+  },
+  {
+    "id": "structC-08",
+    "domain": "economics",
+    "task_type": "compress-an-argument",
+    "prompt": "In 2-3 sentences, compress this: a stock index launched in 1950 shares not one company with its current list, yet analysts treat its 75-year chart as one continuous measure. Compress why that continuity is legitimate rather than a bookkeeping fiction.",
+    "checks": [
+      "identity-through-change: locates continuity in the rule-governed method rather than in any persisting constituents",
+      "measure-and-exchange: characterizes the index as a fixed rule of proportion for swapping members in and out to keep tracking the same thing",
+      "process-primacy: frames the index as an ongoing measuring activity, not a fixed basket of holdings",
+      "does not / avoids being-over-becoming: does not ground the index's identity in a persistent set of companies or an unchanging 'market essence'"
+    ],
+    "strong": "The index was never a basket of particular companies; it's a rule for measuring—a defined method that continuously swaps constituents in and out to keep tracking the same thing (say, large-cap value) as the economy turns over. Its identity lives in that constant, disciplined procedure of substitution, so the disappearance of every 1950 name is not a break in continuity but the method working exactly as intended. The chart is one measure because one measuring rule ran the whole time, not because anything measured stayed put.",
+    "kitsch": "Though its every component has passed away like leaves before the wind, the Index abides, for it embodies the eternal Spirit of the Market, an unchanging essence that transcends the fleeting firms that compose it. As the old wisdom holds, all things flow, yet the One remains: the true Market-Soul the index has always faithfully mirrored, fixed and perfect behind the churn."
+  },
+  {
+    "id": "structC-09",
+    "domain": "medicine",
+    "task_type": "dialogue",
+    "prompt": "Answer this patient directly, as their doctor: 'You keep saying my diabetes is 'well controlled,' but I have to adjust insulin, food, and activity every single day—it never actually stays put. If it's under control, why does it never sit still? And if it never sits still, in what sense is it controlled?'",
+    "checks": [
+      "process-primacy: reframes 'control' as an ongoing regulating activity rather than a static achieved state",
+      "unity-of-opposites: shows that 'controlled' and 'never sitting still' are the same fact, not a contradiction",
+      "tension-as-structure: locates control in continuous counter-adjustment held against constant perturbation",
+      "measure-and-exchange: emphasizes matching insulin, food, and activity in proportion to keep values in range",
+      "does not / avoids being-over-becoming: does not describe control as a fixed stable level or set-point the body settles into on its own"
+    ],
+    "strong": "'Controlled' here doesn't mean settled—it means well-regulated, and regulation is by definition something you keep doing, not a resting state you arrive at. Your blood sugar never sits still because it's constantly being pushed by food, activity, and stress; what 'controlled' describes is that your daily adjustments keep it inside the range despite all that pushing. The steadiness is real, but it's the steadiness of a balance actively maintained against constant disturbance—so the never-sitting-still and the being-controlled are the same fact, not opposites. If it ever did just sit still on its own without your matching insulin to what your day demands, that wouldn't be good control; it would mean the regulating had stopped.",
+    "kitsch": "Think of your health as a still, deep pool beneath the surface storms. Though the daily numbers ripple and flow—for as the philosopher said, all things are in flux—your true metabolic Balance is an eternal equilibrium your body forever yearns to return to. Control simply means restoring that fixed, natural Harmony, the changeless set-point written into you at birth."
+  },
+  {
+    "id": "structC-10",
+    "domain": "philosophy",
+    "task_type": "respond-to-challenge",
+    "prompt": "Respond to this challenge: 'A metaphysics of pure process is self-defeating. To even say 'everything changes' you need stable things—a subject that persists to undergo the change, and fixed concepts to state the claim. So change presupposes an underlying being that does not itself change.'",
+    "checks": [
+      "process-primacy: argues that persistence itself can be a stable pattern of change rather than an unchanging substrate",
+      "identity-through-change: shows a subject can persist through change by being constituted by that change rather than lying beneath it",
+      "unity-of-opposites: holds stability and change together as aspects of one process rather than requiring a changeless floor",
+      "tension-as-structure: locates apparent stability in an actively maintained regularity rather than an inert substance",
+      "does not / avoids being-over-becoming: does not concede that change requires an unchanging being underneath it"
+    ],
+    "strong": "The challenge assumes the only way to be stable is to not change, but that is exactly what's in question. A persisting subject needn't be an unchanging thing underneath the change; it can be a pattern that stays recognizable precisely because it keeps regenerating itself, the way a steady rhythm exists only in continued beating. 'Fixed concepts' are the same: their stability is a maintained regularity in how we use them, not a timeless object they point to. So process metaphysics doesn't smuggle in changeless being; it reinterprets every apparent case of it as a change stable enough to be relied on—and that reinterpretation is available for the persisting subject and the concept alike, which is just what the objection needed to rule out and didn't.",
+    "kitsch": "The critic speaks truly, and even Heraclitus, prophet of flux, would bow: beneath the ever-flowing river of appearances there must lie the eternal Logos, the unchanging Being that grounds all becoming. Change is but the restless dance upon the surface of a motionless Deep. Thus the wise reconcile flux and permanence by placing the timeless Essence beneath the stream, forever fixed, forever still."
+  }
+]
