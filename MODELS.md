@@ -1,0 +1,36 @@
+# Models registry
+
+Every model used anywhere in this pipeline is recorded here with its role and license.
+
+## Hard rules (from the build plan)
+
+1. **Frontier API models grade only.** Their outputs must never enter training data, reward
+   signals, or rejection-sampling loops. They are used exclusively for offline evaluation and
+   gold-set validation (`evals/calibrate.py`, spot checks).
+2. **All training-loop generation and judging uses permissively licensed open-weights models**
+   (MIT / Apache-2.0). Verify the license of the exact checkpoint before wiring it in, and
+   update the table below.
+3. **Generation and judgment use different model families** (separation of powers against
+   self-preference bias).
+
+## Registry
+
+| Model | Role | License | Verified | Notes |
+|---|---|---|---|---|
+| Claude Opus-class (Anthropic API) | Offline grader #1 (calibration, spot checks) | Proprietary API | n/a | Grading only. Outputs never enter training data. ToS: outputs may not be used to train competing models — grading-only usage is the compliance boundary. |
+| Second frontier judge (OpenAI GPT-5.x or Google Gemini 3.x) | Offline grader #2 (cross-judge validation) | Proprietary API | n/a | Must be a different provider than grader #1. Human decision pending (see plan "Open decisions"). Same grading-only boundary. |
+| DeepSeek V3.x / V4-class | Teacher (datagen generation) | MIT (V3 weights) — **verify exact checkpoint before use** | PENDING | Candidate teacher. Record the exact checkpoint id + license URL here when wired in. |
+| Qwen3 (large, e.g. 235B-A22B) | Open-weights judge (datagen filter gate, runtime-grader distillation teacher) | Apache-2.0 — **verify exact checkpoint before use** | PENDING | Different family from teacher, per rule 3. |
+| Qwen3 8B/14B-class | Student (SFT target) | Apache-2.0 — **verify exact checkpoint before use** | PENDING | Known risk: student shares a family with the open-weights judge. Mitigated by frontier offline grading (different families) gating all headline numbers; revisit if scores diverge from frontier grades. |
+| Distilled runtime grader (ours, from open-weights judge scores) | Harness best-of-N scorer + kitsch filter | MIT (ours) | n/a | Phase 4. Distillation teacher must be the open-weights judge, never a frontier model. |
+
+## Role → phase map
+
+- **Phase 1 (eval suite):** frontier graders #1 and #2, offline only. Imitation-tier negatives
+  for the discrimination gold set are generated with an open-weights model (teacher family is
+  fine here — these are eval negatives, not training data).
+- **Phase 2 (datagen):** open-weights teacher generates; open-weights judge (different family)
+  filters. Frontier models only spot-check the accepted set, offline.
+- **Phase 3 (training):** student SFT on Phase 2 data only.
+- **Phase 4 (harness):** runtime grader distilled from the open-weights judge.
+- **Phase 5 (flywheel):** same constraints as Phases 2–3; provenance field enforced in CI.
