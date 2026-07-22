@@ -1,0 +1,56 @@
+{
+  "candidate": "student_local",
+  "judge": "judge_local",
+  "generative_dimensions": {
+    "structural_transfer": 0.8125,
+    "anti_kitsch": 1.0,
+    "tension_holding": 0.78125,
+    "corpus_consistency": 1.0
+  },
+  "generative_composite": 0.8774038461538461,
+  "full_composite_with_judge_dims": 0.9203125,
+  "n_structural": 8,
+  "n_tension": 8,
+  "responses": [
+    {
+      "id": "struct-0001",
+      "response": "A large software codebase remains recognizable across decades of continuous refactoring because its structure, algorithms, and functional requirements persist as the code evolves. The system\u2019s identity is not in the specific lines of code but in the logical relationships, data models, and problem spaces it enforces. Even as layers of obsolescence are stripped away, the system\u2019s core purpose\u2014solving a particular problem\u2014remains, creating a stable framework for future changes. This tension between adaptation and continuity defines its persistence, with each iteration preserving enough of the original to allow for evolution without losing the system\u2019s functional essence.",
+      "structural": 3
+    },
+    {
+      "id": "struct-0002",
+      "response": "The couple\u2019s claim is rooted in the evolving nature of their relationship, which persists through mutual adaptation rather than fixed roles. Their shared history and evolving needs create a dynamic interplay between past and present, where each partner\u2019s growth\u2014whether in values, habits, or emotional landscape\u2014continuously reshapes the dynamic. The marriage\u2019s stability lies not in invariance but in the ongoing negotiation of change, where the couple\u2019s evolving perspectives and daily interactions sustain the relationship\u2019s coherence, even as their identities shift. The tension between continuity and transformation is what allows the marriage to feel \u201cstill the same\u201d in a meaningful way.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0003",
+      "response": "A company\u2019s claim that its culture will survive a merger is coherent only if the merger\u2019s structural changes\u2014like leadership, values, or operational norms\u2014align with the core identity it enshrines. The culture\u2019s survival depends on whether its defining traits (e.g., collaboration, accountability, or risk-taking) are preserved through adaptation, not just resisted. If the merger\u2019s logic\u2014say, cost-cutting or standardized metrics\u2014overwhelms these values, the claim risks being wishful, as it assumes the culture\u2019s essence remains intact despite external pressures. Coherence requires the merger\u2019s structure to reflect or renegotiate the culture\u2019s meaning, while wishful survival hinges on the culture\u2019s persistence, regardless of the merger\u2019s validity.",
+      "structural": 3
+    },
+    {
+      "id": "struct-0004",
+      "response": "A standing wave\u2019s persistence through continuous water movement reveals that a 'thing' isn\u2019t fixed but emerges from the interplay of forces and conditions. Its shape is sustained not by an unchanging substance but by the ongoing interaction between the wave\u2019s form and the dynamic environment, where the water\u2019s role shifts with each ripple. The wave\u2019s identity is not in the water itself but in the pattern of its existence, which is both fragile and enduring, shaped by the tension between change and stability.",
+      "structural": 4
+    },
+    {
+      "id": "struct-0005",
+      "response": "The self is not a fixed entity but a series of shifting roles, each shaped by the same physical framework yet constantly redefined by the mind\u2019s capacity to adapt, forget, and reconstruct meaning. The body\u2019s renewal\u2014cells, tissues, and systems\u2014creates a dynamic continuity, while the mind\u2019s processes of forgetting, distorting, and reconstructing memory allow for a sense of identity that feels stable, even as it is perpetually rewritten. This tension between the static structure of the body and the fluidity of the mind defines the self, holding its form without collapsing into a single, unchanging core.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0006",
+      "response": "A mathematical object like the number 7 is not a fixed, unchanging thing but a stable reference point in a shifting, contingent reality. Its existence depends on the conventions and systems that define it, yet its properties\u2014such as divisibility, order, and abstraction\u2014persist across changing contexts. The number\u2019s meaning is not inherent but constructed, yet its role in calculations and logic remains consistent, revealing a tension between stability and the processes that sustain it. The number\u2019s unchanging essence is a surface-level truth, masking the dynamic interplay between its function and the evolving frameworks that make it meaningful.",
+      "structural": 5
+    },
+    {
+      "id": "struct-0007",
+      "response": "The nation\u2019s name and borders endure as markers of historical continuity, yet its people, laws, language, and values are shaped by the dynamic interplay of change and transformation. This tension between fixed symbols and evolving realities creates a paradox: the state exists as a framework that resists dissolution, yet its essence is sustained through the ongoing negotiation of identity. The name and borders are not merely static, but the result of collective memory and political will, which outlast the transient elements of culture and law. The state\u2019s survival depends on balancing this legacy with the impermanence of its components, ensuring that its form remains a vessel for the ongoing process of becoming.",
+      "structural": 4
+    },
+    {
+      "id": "struct-0008",
+      "response": "A forest\u2019s identity is not fixed but emerges through its continuous transformation, where the same physical space\u2014trees, soil, and climate\u2014repeats its role in cycles of fire, decay, and regrowth. Its \u201csame\u201d is a temporary agreement among observers who recognize patterns across decades, while its essence lies in the interplay of change and the persistence of its ecological framework. The forest\u2019s existence is a negotiation between what is lost and what is sustained, with each fire and regrowth reshaping the balance of life and death, yet the land itself remains a site of both continuity and reinvention.",
+      "structural": 5
+    }
+  ]
+}

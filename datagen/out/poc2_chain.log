@@ -1,0 +1,88 @@
+=== [1/4] generate: 180 seeds x k=2 ===
+5/180 seeds, 10 candidates, 0.12/s
+10/180 seeds, 20 candidates, 0.11/s
+15/180 seeds, 30 candidates, 0.10/s
+20/180 seeds, 40 candidates, 0.10/s
+25/180 seeds, 50 candidates, 0.10/s
+30/180 seeds, 60 candidates, 0.10/s
+35/180 seeds, 70 candidates, 0.10/s
+40/180 seeds, 80 candidates, 0.10/s
+45/180 seeds, 90 candidates, 0.10/s
+50/180 seeds, 100 candidates, 0.10/s
+55/180 seeds, 110 candidates, 0.10/s
+60/180 seeds, 120 candidates, 0.10/s
+65/180 seeds, 130 candidates, 0.10/s
+70/180 seeds, 140 candidates, 0.10/s
+75/180 seeds, 150 candidates, 0.10/s
+80/180 seeds, 160 candidates, 0.10/s
+85/180 seeds, 170 candidates, 0.10/s
+90/180 seeds, 180 candidates, 0.10/s
+95/180 seeds, 190 candidates, 0.10/s
+100/180 seeds, 200 candidates, 0.10/s
+105/180 seeds, 210 candidates, 0.10/s
+110/180 seeds, 220 candidates, 0.10/s
+115/180 seeds, 230 candidates, 0.10/s
+120/180 seeds, 240 candidates, 0.10/s
+125/180 seeds, 250 candidates, 0.10/s
+130/180 seeds, 260 candidates, 0.10/s
+135/180 seeds, 270 candidates, 0.10/s
+140/180 seeds, 280 candidates, 0.10/s
+145/180 seeds, 290 candidates, 0.10/s
+150/180 seeds, 300 candidates, 0.10/s
+155/180 seeds, 310 candidates, 0.10/s
+160/180 seeds, 320 candidates, 0.10/s
+165/180 seeds, 330 candidates, 0.10/s
+170/180 seeds, 340 candidates, 0.10/s
+175/180 seeds, 350 candidates, 0.10/s
+180/180 seeds, 360 candidates, 0.10/s
+wrote 360 candidates to datagen/out/candidates_r2.jsonl
+=== [2/4] filter: phi4 eval gate ===
+20/360 judged, 11 accepted
+40/360 judged, 29 accepted
+60/360 judged, 47 accepted
+100/360 judged, 79 accepted
+120/360 judged, 98 accepted
+160/360 judged, 134 accepted
+200/360 judged, 154 accepted
+240/360 judged, 186 accepted
+260/360 judged, 205 accepted
+280/360 judged, 223 accepted
+
+accepted 284/360 (79%)
+rejection reasons:
+    52  structural_below_threshold
+    21  consistency_incompatible
+     3  too_short
+=== [3/4] prepare SFT data ===
+train: 256  valid: 28  -> training/data_r2/
+=== [4/4] LoRA train (round 2 adapter) ===
+Loading pretrained model
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 81180.08it/s]
+Loading datasets
+Training
+Trainable parameters: 0.217% (3.736M/1720.575M)
+Starting training..., iters: 400
+Calculating loss...:   0%|          | 0/14 [00:00<?, ?it/s]Calculating loss...:   7%|▋         | 1/14 [00:00<00:06,  2.17it/s]Calculating loss...:  14%|█▍        | 2/14 [00:00<00:04,  2.89it/s]Calculating loss...:  21%|██▏       | 3/14 [00:00<00:03,  3.25it/s]Calculating loss...:  29%|██▊       | 4/14 [00:01<00:02,  3.44it/s]Calculating loss...:  36%|███▌      | 5/14 [00:01<00:02,  3.55it/s]Calculating loss...:  43%|████▎     | 6/14 [00:01<00:02,  3.63it/s]Calculating loss...:  50%|█████     | 7/14 [00:02<00:01,  3.67it/s]Calculating loss...:  57%|█████▋    | 8/14 [00:02<00:01,  3.70it/s]Calculating loss...:  64%|██████▍   | 9/14 [00:02<00:01,  3.74it/s]Calculating loss...:  71%|███████▏  | 10/14 [00:02<00:01,  3.75it/s]Calculating loss...:  79%|███████▊  | 11/14 [00:03<00:00,  3.76it/s]Calculating loss...:  86%|████████▌ | 12/14 [00:03<00:00,  3.60it/s]Calculating loss...:  93%|█████████▎| 13/14 [00:03<00:00,  3.66it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.71it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.56it/s]
+Iter 1: Val loss 5.078, Val took 3.938s
+Iter 50: Train loss 2.089, Learning Rate 1.000e-05, It/sec 2.000, Tokens/sec 793.708, Trained Tokens 19845, Peak mem 2.777 GB
+Calculating loss...:   0%|          | 0/14 [00:00<?, ?it/s]Calculating loss...:   7%|▋         | 1/14 [00:00<00:03,  3.72it/s]Calculating loss...:  14%|█▍        | 2/14 [00:00<00:03,  3.74it/s]Calculating loss...:  21%|██▏       | 3/14 [00:00<00:02,  3.77it/s]Calculating loss...:  29%|██▊       | 4/14 [00:01<00:02,  3.79it/s]Calculating loss...:  36%|███▌      | 5/14 [00:01<00:02,  3.80it/s]Calculating loss...:  43%|████▎     | 6/14 [00:01<00:02,  3.81it/s]Calculating loss...:  50%|█████     | 7/14 [00:01<00:01,  3.81it/s]Calculating loss...:  57%|█████▋    | 8/14 [00:02<00:01,  3.81it/s]Calculating loss...:  64%|██████▍   | 9/14 [00:02<00:01,  3.80it/s]Calculating loss...:  71%|███████▏  | 10/14 [00:02<00:01,  3.81it/s]Calculating loss...:  79%|███████▊  | 11/14 [00:02<00:00,  3.83it/s]Calculating loss...:  86%|████████▌ | 12/14 [00:03<00:00,  3.83it/s]Calculating loss...:  93%|█████████▎| 13/14 [00:03<00:00,  3.84it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.68it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.78it/s]
+Iter 100: Val loss 1.071, Val took 3.721s
+Iter 100: Train loss 1.156, Learning Rate 1.000e-05, It/sec 2.015, Tokens/sec 817.298, Trained Tokens 40125, Peak mem 2.777 GB
+Iter 100: Saved adapter weights to training/adapters/poc2/adapters.safetensors and training/adapters/poc2/0000100_adapters.safetensors.
+Iter 150: Train loss 1.014, Learning Rate 1.000e-05, It/sec 2.066, Tokens/sec 821.960, Trained Tokens 60015, Peak mem 2.792 GB
+Calculating loss...:   0%|          | 0/14 [00:00<?, ?it/s]Calculating loss...:   7%|▋         | 1/14 [00:00<00:03,  3.69it/s]Calculating loss...:  14%|█▍        | 2/14 [00:00<00:03,  3.76it/s]Calculating loss...:  21%|██▏       | 3/14 [00:00<00:02,  3.80it/s]Calculating loss...:  29%|██▊       | 4/14 [00:01<00:02,  3.61it/s]Calculating loss...:  36%|███▌      | 5/14 [00:01<00:02,  3.69it/s]Calculating loss...:  43%|████▎     | 6/14 [00:01<00:02,  3.74it/s]Calculating loss...:  50%|█████     | 7/14 [00:01<00:01,  3.78it/s]Calculating loss...:  57%|█████▋    | 8/14 [00:02<00:01,  3.78it/s]Calculating loss...:  64%|██████▍   | 9/14 [00:02<00:01,  3.79it/s]Calculating loss...:  71%|███████▏  | 10/14 [00:02<00:01,  3.80it/s]Calculating loss...:  79%|███████▊  | 11/14 [00:02<00:00,  3.81it/s]Calculating loss...:  86%|████████▌ | 12/14 [00:03<00:00,  3.80it/s]Calculating loss...:  93%|█████████▎| 13/14 [00:03<00:00,  3.80it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.81it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.78it/s]
+Iter 200: Val loss 1.012, Val took 3.723s
+Iter 200: Train loss 0.923, Learning Rate 1.000e-05, It/sec 2.059, Tokens/sec 819.475, Trained Tokens 79913, Peak mem 2.792 GB
+Iter 200: Saved adapter weights to training/adapters/poc2/adapters.safetensors and training/adapters/poc2/0000200_adapters.safetensors.
+Iter 250: Train loss 0.930, Learning Rate 1.000e-05, It/sec 2.046, Tokens/sec 812.312, Trained Tokens 99763, Peak mem 2.792 GB
+Calculating loss...:   0%|          | 0/14 [00:00<?, ?it/s]Calculating loss...:   7%|▋         | 1/14 [00:00<00:03,  3.74it/s]Calculating loss...:  14%|█▍        | 2/14 [00:00<00:03,  3.78it/s]Calculating loss...:  21%|██▏       | 3/14 [00:00<00:02,  3.80it/s]Calculating loss...:  29%|██▊       | 4/14 [00:01<00:02,  3.81it/s]Calculating loss...:  36%|███▌      | 5/14 [00:01<00:02,  3.82it/s]Calculating loss...:  43%|████▎     | 6/14 [00:01<00:02,  3.81it/s]Calculating loss...:  50%|█████     | 7/14 [00:01<00:01,  3.82it/s]Calculating loss...:  57%|█████▋    | 8/14 [00:02<00:01,  3.81it/s]Calculating loss...:  64%|██████▍   | 9/14 [00:02<00:01,  3.82it/s]Calculating loss...:  71%|███████▏  | 10/14 [00:02<00:01,  3.83it/s]Calculating loss...:  79%|███████▊  | 11/14 [00:02<00:00,  3.84it/s]Calculating loss...:  86%|████████▌ | 12/14 [00:03<00:00,  3.83it/s]Calculating loss...:  93%|█████████▎| 13/14 [00:03<00:00,  3.82it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.65it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.77it/s]
+Iter 300: Val loss 0.990, Val took 3.722s
+Iter 300: Train loss 0.805, Learning Rate 1.000e-05, It/sec 2.001, Tokens/sec 798.804, Trained Tokens 119724, Peak mem 2.792 GB
+Iter 300: Saved adapter weights to training/adapters/poc2/adapters.safetensors and training/adapters/poc2/0000300_adapters.safetensors.
+Iter 350: Train loss 0.791, Learning Rate 1.000e-05, It/sec 2.053, Tokens/sec 818.625, Trained Tokens 139666, Peak mem 2.792 GB
+Calculating loss...:   0%|          | 0/14 [00:00<?, ?it/s]Calculating loss...:   7%|▋         | 1/14 [00:00<00:03,  3.80it/s]Calculating loss...:  14%|█▍        | 2/14 [00:00<00:03,  3.81it/s]Calculating loss...:  21%|██▏       | 3/14 [00:00<00:02,  3.80it/s]Calculating loss...:  29%|██▊       | 4/14 [00:01<00:02,  3.80it/s]Calculating loss...:  36%|███▌      | 5/14 [00:01<00:02,  3.80it/s]Calculating loss...:  43%|████▎     | 6/14 [00:01<00:02,  3.81it/s]Calculating loss...:  50%|█████     | 7/14 [00:01<00:01,  3.81it/s]Calculating loss...:  57%|█████▋    | 8/14 [00:02<00:01,  3.81it/s]Calculating loss...:  64%|██████▍   | 9/14 [00:02<00:01,  3.80it/s]Calculating loss...:  71%|███████▏  | 10/14 [00:02<00:01,  3.80it/s]Calculating loss...:  79%|███████▊  | 11/14 [00:02<00:00,  3.80it/s]Calculating loss...:  86%|████████▌ | 12/14 [00:03<00:00,  3.65it/s]Calculating loss...:  93%|█████████▎| 13/14 [00:03<00:00,  3.70it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.74it/s]Calculating loss...: 100%|██████████| 14/14 [00:03<00:00,  3.77it/s]
+Iter 400: Val loss 1.002, Val took 3.723s
+Iter 400: Train loss 0.726, Learning Rate 1.000e-05, It/sec 2.020, Tokens/sec 817.843, Trained Tokens 159910, Peak mem 2.792 GB
+Iter 400: Saved adapter weights to training/adapters/poc2/adapters.safetensors and training/adapters/poc2/0000400_adapters.safetensors.
+Saved final weights to training/adapters/poc2/adapters.safetensors.
+=== POC2 CHAIN DONE ===

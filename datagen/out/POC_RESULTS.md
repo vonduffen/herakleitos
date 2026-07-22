@@ -32,3 +32,23 @@ Robustness fixes the PoC forced into the harness (kept for production):
 - strip_thinking() for reasoning-mode models (Qwen3 <think> blocks)
 - //-comment-tolerant JSON parsing (Phi-4 annotates its JSON)
 - retry-with-temperature-nudge on unparseable judge replies
+
+## Round 2 (same day) — 180 seeds, 3x data
+
+Seed bank scaled 42 -> 180 (12 domains); teacher k=2 -> 360 candidates;
+phi4 gate accepted 284 (79% — gate rate consistent across scales; 0 kitsch,
+0 contamination); LoRA 400 iters on 255 train / 29 valid (val ~0.99-1.00,
+no round-1-style overfit).
+
+| dimension           | base  | r1    | r2    | r2-base |
+|---------------------|-------|-------|-------|---------|
+| structural_transfer | 0.844 | 0.844 | 0.812 | -0.031  |
+| anti_kitsch         | 1.000 | 1.000 | 1.000 | +0.000  |
+| tension_holding     | 0.500 | 0.625 | 0.781 | +0.281  |
+| corpus_consistency  | 0.875 | 1.000 | 1.000 | +0.125  |
+| **composite**       | 0.805 | 0.853 | 0.877 | +0.072  |
+
+Signal: tension-holding — the hardest dimension — keeps scaling with more
+gate-filtered data (0.500 -> 0.625 -> 0.781). The structural dip (-0.031) is
+one item's score at n=8; treat as noise pending a larger eval slice.
+Discrimination gold set also grew to 251 items (99 local imitations, 3 tiers).

@@ -1,9 +1,9 @@
 {
-  "total": 126,
-  "accepted": 100,
+  "total": 360,
+  "accepted": 284,
   "reasons": {
-    "consistency_incompatible": 12,
-    "structural_below_threshold": 11,
+    "consistency_incompatible": 21,
+    "structural_below_threshold": 52,
     "too_short": 3
   }
 }
