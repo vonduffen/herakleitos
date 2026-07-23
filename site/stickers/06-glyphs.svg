@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" width="520" height="110">
+  <!-- the four moves · laptop strip ~130x27mm -->
+  <rect x="3" y="3" width="514" height="104" rx="10" fill="#e7e3d9" stroke="#141310" stroke-width="6"/>
+  <g font-family="ui-monospace,Menlo,Consolas,monospace" font-weight="800" fill="#141310" text-anchor="middle">
+    <rect x="26"  y="24" width="106" height="44" fill="none" stroke="#141310" stroke-width="2"/>
+    <text x="79"  y="53" font-size="19">A &lt;=&gt; B</text>
+    <rect x="148" y="24" width="106" height="44" fill="none" stroke="#141310" stroke-width="2"/>
+    <text x="201" y="53" font-size="19">· · · →</text>
+    <rect x="270" y="24" width="106" height="44" fill="none" stroke="#141310" stroke-width="2"/>
+    <text x="323" y="53" font-size="19">■ □ ■</text>
+    <rect x="392" y="24" width="106" height="44" fill="none" stroke="#c8371f" stroke-width="2.5"/>
+    <text x="445" y="53" font-size="19" fill="#c8371f">( A | ¬A )</text>
+  </g>
+  <text x="260" y="92" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="4" fill="#141310" opacity="0.75">THE FOUR MOVES · herakleitos.ai</text>
+</svg>

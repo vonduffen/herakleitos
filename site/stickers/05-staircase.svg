@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <!-- the staircase result · ~80x52mm -->
+  <rect x="0" y="0" width="400" height="260" rx="16" fill="#141310"/>
+  <text x="32" y="52" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="24" font-weight="800" letter-spacing="1" fill="#e7e3d9">TENSION HOLDS.</text>
+  <!-- bars: 0.500 / 0.625 / 0.781 scaled to max height 120 -->
+  <g>
+    <rect x="52"  y="164" width="72" height="58"  fill="none" stroke="#c8371f" stroke-width="2.5"/>
+    <rect x="164" y="149" width="72" height="73"  fill="#c8371f" opacity="0.55"/>
+    <rect x="276" y="131" width="72" height="91"  fill="#c8371f"/>
+    <text x="88"  y="152" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" font-weight="800" fill="#e7e3d9">.500</text>
+    <text x="200" y="137" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" font-weight="800" fill="#e7e3d9">.625</text>
+    <text x="312" y="119" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" font-weight="800" fill="#c8371f">.781</text>
+  </g>
+  <line x1="32" y1="222" x2="368" y2="222" stroke="#e7e3d9" stroke-width="2" opacity="0.5"/>
+  <text x="32" y="246" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#e7e3d9" opacity="0.7">TRAINED, NOT PROMPTED · herakleitos.ai</text>
+</svg>

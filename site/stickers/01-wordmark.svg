@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 150" width="480" height="150">
+  <!-- herakleitos.ai wordmark sticker · print ~96x30mm · cut on outer radius -->
+  <rect x="4" y="4" width="472" height="142" rx="14" fill="#e7e3d9" stroke="#141310" stroke-width="8"/>
+  <text x="40" y="76" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="44" font-weight="800" letter-spacing="-2" fill="#141310">herakleitos.ai</text>
+  <text x="404" y="76" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="30" font-weight="700" fill="#c8371f">&lt;—&gt;</text>
+  <line x1="40" y1="96" x2="440" y2="96" stroke="#141310" stroke-width="2" opacity="0.35"/>
+  <text x="40" y="122" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="15" font-weight="700" letter-spacing="4" fill="#141310">STRUCTURE, NOT STYLE.</text>
+</svg>

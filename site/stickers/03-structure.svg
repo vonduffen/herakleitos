@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360">
+  <!-- thesis block · square die-cut ~70mm -->
+  <rect x="0" y="0" width="360" height="360" rx="18" fill="#141310"/>
+  <text x="34" y="102" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="52" font-weight="800" letter-spacing="-2" fill="#e7e3d9">STRUC-</text>
+  <text x="34" y="162" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="52" font-weight="800" letter-spacing="-2" fill="#e7e3d9">TURE,</text>
+  <text x="34" y="228" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="52" font-weight="800" letter-spacing="-2" fill="#c8371f">NOT</text>
+  <text x="34" y="292" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="52" font-weight="800" letter-spacing="-2" fill="#e7e3d9">STYLE.</text>
+  <text x="34" y="332" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" font-weight="700" letter-spacing="3" fill="#e7e3d9" opacity="0.65">herakleitos.ai</text>
+</svg>

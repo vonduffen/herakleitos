@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <!-- anti-kitsch certification stamp · ~80x48mm -->
+  <rect x="4" y="4" width="392" height="232" rx="12" fill="#e7e3d9" stroke="#141310" stroke-width="6"/>
+  <g transform="rotate(-3 200 120)">
+    <rect x="36" y="34" width="328" height="172" fill="none" stroke="#c8371f" stroke-width="3"/>
+    <rect x="44" y="42" width="312" height="156" fill="none" stroke="#c8371f" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="200" y="84" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="26" font-weight="800" letter-spacing="3" fill="#c8371f">ANTI-KITSCH</text>
+    <text x="200" y="114" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18" font-weight="800" letter-spacing="6" fill="#c8371f">CERTIFIED</text>
+    <line x1="76" y1="132" x2="324" y2="132" stroke="#141310" stroke-width="2"/>
+    <text x="200" y="158" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="15" font-weight="700" letter-spacing="1" fill="#141310">✕ NO RIVER QUOTES · ✕ NO ORACLE VOICE</text>
+    <text x="200" y="184" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#141310">AKM 0.08 — herakleitos.ai</text>
+  </g>
+</svg>
