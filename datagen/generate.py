@@ -37,10 +37,31 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--k", type=int, default=3, help="candidates per seed")
     ap.add_argument("--out", required=True)
     ap.add_argument("--limit", type=int, default=None, help="cap number of seeds")
+    ap.add_argument(
+        "--seeds-file", default=None, help="jsonl from expand_seeds (default: built-ins)"
+    )
     args = ap.parse_args(argv)
 
     backend = load_backend(args.backend)
-    seeds = build_seeds()
+    if args.seeds_file:
+        from datagen.seeds import Seed
+
+        seeds = [
+            Seed(
+                id=r["id"],
+                domain=r["domain"],
+                task_type=r["task_type"],
+                prompt=r["prompt"],
+                target_moves=tuple(r["target_moves"]),
+            )
+            for r in (
+                json.loads(line)
+                for line in Path(args.seeds_file).read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            )
+        ]
+    else:
+        seeds = build_seeds()
     if args.limit:
         seeds = seeds[: args.limit]
 
