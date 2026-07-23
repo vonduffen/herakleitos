@@ -1,0 +1,32 @@
+=== [0/7] preflight (hard cap: $200) ===
+== key check ==
+  teacher            TOGETHER_API_KEY           ok    <- seed expansion + candidate generation (Together)
+  openweights_judge  TOGETHER_API_KEY           ok    <- eval gate (Together)
+  frontier1          ANTHROPIC_API_KEY          absent (calibration deferred)   <- calibration judge #1 (Anthropic)
+  frontier2          OPENAI_API_KEY             absent (calibration deferred)   <- calibration judge #2 (OpenAI)
+== live check (1 tiny call per required backend) ==
+  teacher            responds: ''
+  openweights_judge  responds: 'ok'
+== cost estimate (before 25% contingency) ==
+  seed expansion (~120 calls)            $   0.56
+  teacher generation (8k)                $  15.31
+  gate judging (24k calls)               $   3.76
+  frontier calibration (1.2k calls)      $  33.60  (skipped: no frontier keys)
+  frontier report cards (400 calls)      $  11.20  (skipped: no frontier keys)
+  TOTAL with 25% contingency             $  24.54   (cap $200)
+PREFLIGHT: GO
+=== [1/7] seed expansion -> ~2,000 seeds ===
+technology: +78 scenarios
+relationships: +124 scenarios
+organizations: +62 scenarios
+nature: +39 scenarios
+mathematics: +36 scenarios
+personal_identity: +95 scenarios
+politics: +92 scenarios
+economics: +27 scenarios
+language: +43 scenarios
+art: +104 scenarios
+medicine: +107 scenarios
+history: +54 scenarios
+wrote 1041 seeds to datagen/out/lean/seeds.jsonl
+=== [2/7] teacher generation: 2,000 seeds x k=4 = 8,000 candidates ===

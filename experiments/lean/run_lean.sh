@@ -17,14 +17,14 @@ echo "=== [1/7] seed expansion -> ~2,000 seeds ==="
     --backend teacher --target 2000 --out "$OUT/seeds.jsonl"
 
 echo "=== [2/7] teacher generation: 2,000 seeds x k=4 = 8,000 candidates ==="
-[ -s "$OUT/candidates.jsonl" ] || uv run python -m datagen.generate \
+[ -f "$OUT/candidates.jsonl.done" ] || uv run python -m datagen.generate \
     --backend teacher --k 4 --seeds-file "$OUT/seeds.jsonl" \
-    --out "$OUT/candidates.jsonl"
+    --workers 12 --out "$OUT/candidates.jsonl"
 
 echo "=== [3/7] eval gate (Qwen3-235B, 3 rubric calls per candidate) ==="
 [ -s "$OUT/accepted.jsonl" ] || uv run python -m datagen.filter \
     --in "$OUT/candidates.jsonl" --backend openweights_judge \
-    --teacher-backend teacher --out "$OUT/accepted.jsonl"
+    --teacher-backend teacher --workers 12 --out "$OUT/accepted.jsonl"
 
 echo "=== [4/7] ablation sets: arm A (filtered) vs arm B (unfiltered, size-matched) ==="
 uv run python -m experiments.lean.make_ablation_sets \

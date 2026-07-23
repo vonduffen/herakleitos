@@ -23,8 +23,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import threading
 import tomllib
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from evals.decontaminate import shingles
@@ -74,6 +76,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--teacher-backend", default="teacher_local")
     ap.add_argument("--out", required=True)
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--workers", type=int, default=1, help="concurrent candidates (1 for local)")
     args = ap.parse_args(argv)
 
     _different_family_or_die(args.teacher_backend, args.backend)
@@ -93,14 +96,15 @@ def main(argv: list[str] | None = None) -> int:
     reasons: Counter[str] = Counter()
     accepted: list[dict] = []
     accepted_shingles: list[set[str]] = []
+    lock = threading.Lock()
 
-    for i, c in enumerate(candidates):
+    # Cheap, order-dependent screens run sequentially first (dedupe needs order).
+    to_judge: list[dict] = []
+    for c in candidates:
         text = c["response"].strip()
         if len(text.split()) < 15:
             reasons["too_short"] += 1
             continue
-
-        # decontamination against the gold set
         st = shingles(text)
         if any(
             sg and st and len(st & sg) / min(len(st), len(sg)) >= DECONTAM_OVERLAP
@@ -108,35 +112,28 @@ def main(argv: list[str] | None = None) -> int:
         ):
             reasons["goldset_contamination"] += 1
             continue
-
-        # dedupe against already-accepted
         if any(
             sa and len(st & sa) / min(len(st), len(sa)) >= DEDUPE_OVERLAP
             for sa in accepted_shingles
         ):
             reasons["near_duplicate"] += 1
             continue
+        accepted_shingles.append(st)  # reserve; judged next
+        c["_shingles_reserved"] = True
+        to_judge.append(c)
 
-        try:
-            ak = judge.score_anti_kitsch(backend, text)
-            if ak.get("flags") or ak.get("score", 5) < KITSCH_MIN_SCORE:
-                reasons[f"kitsch:{','.join(ak.get('flags', ['low_score']))}"] += 1
-                continue
-
-            checks = [CHECK_TEMPLATES[m] for m in c["target_moves"] if m in CHECK_TEMPLATES]
-            s = judge.score_structural(backend, c["prompt"], checks, text)
-            if s.get("score", 0) < STRUCT_THRESHOLD:
-                reasons["structural_below_threshold"] += 1
-                continue
-
-            cc = judge.check_consistency(backend, text[:800])
-            if cc.get("label") != "compatible":
-                reasons["consistency_incompatible"] += 1
-                continue
-        except Exception as e:  # noqa: BLE001 - judge hiccup: log, skip candidate
-            reasons[f"judge_error:{type(e).__name__}"] += 1
-            continue
-
+    def judge_one(c):
+        text = c["response"].strip()
+        ak = judge.score_anti_kitsch(backend, text)
+        if ak.get("flags") or ak.get("score", 5) < KITSCH_MIN_SCORE:
+            return None, f"kitsch:{','.join(ak.get('flags', ['low_score']))}"
+        checks = [CHECK_TEMPLATES[m] for m in c["target_moves"] if m in CHECK_TEMPLATES]
+        s = judge.score_structural(backend, c["prompt"], checks, text)
+        if s.get("score", 0) < STRUCT_THRESHOLD:
+            return None, "structural_below_threshold"
+        cc = judge.check_consistency(backend, text[:800])
+        if cc.get("label") != "compatible":
+            return None, "consistency_incompatible"
         c["gate"] = {
             "judge_backend": args.backend,
             "anti_kitsch_score": ak.get("score"),
@@ -144,10 +141,24 @@ def main(argv: list[str] | None = None) -> int:
             "checks_passed": sum(bool(x) for x in s.get("checks", [])),
             "checks_total": len(checks),
         }
-        accepted.append(c)
-        accepted_shingles.append(st)
-        if (i + 1) % 20 == 0:
-            print(f"{i + 1}/{len(candidates)} judged, {len(accepted)} accepted")
+        return c, None
+
+    n_judged = 0
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futs = {pool.submit(judge_one, c): c["id"] for c in to_judge}
+        for fut in as_completed(futs):
+            try:
+                ok, reason = fut.result()
+            except Exception as e:  # noqa: BLE001 - judge hiccup: log, skip candidate
+                ok, reason = None, f"judge_error:{type(e).__name__}"
+            with lock:
+                n_judged += 1
+                if ok is not None:
+                    accepted.append(ok)
+                else:
+                    reasons[reason] += 1
+                if n_judged % 100 == 0:
+                    print(f"{n_judged}/{len(to_judge)} judged, {len(accepted)} accepted")
 
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)

@@ -11,7 +11,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from datagen.seeds import build_seeds
@@ -40,9 +42,18 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument(
         "--seeds-file", default=None, help="jsonl from expand_seeds (default: built-ins)"
     )
+    ap.add_argument("--workers", type=int, default=1, help="concurrent API calls (1 for local)")
     args = ap.parse_args(argv)
 
-    backend = load_backend(args.backend)
+    # One backend instance per sampling temperature: thread-safe (no shared
+    # mutation) and preserves the varied-temperature design under concurrency.
+    backends_by_temp = {}
+    for t in TEMPERATURES:
+        b = load_backend(args.backend)
+        if hasattr(b, "temperature"):
+            b.temperature = t
+        backends_by_temp[t] = b
+    backend = backends_by_temp[TEMPERATURES[0]]
     if args.seeds_file:
         from datagen.seeds import Seed
 
@@ -68,43 +79,65 @@ def main(argv: list[str] | None = None) -> int:
     out_path = Path(args.out)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # Resume: skip (seed, k) pairs already on disk.
+    done_ids: set[str] = set()
+    if out_path.exists():
+        for line in out_path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                done_ids.add(json.loads(line)["id"])
+    tasks = [
+        (seed, ki)
+        for seed in seeds
+        for ki in range(args.k)
+        if f"{seed.id}-k{ki}" not in done_ids
+    ]
+    print(f"{len(done_ids)} already done, {len(tasks)} to generate, workers={args.workers}")
+
+    lock = threading.Lock()
     n_done = 0
     t0 = time.time()
-    with out_path.open("w", encoding="utf-8") as f:
-        for si, seed in enumerate(seeds):
-            for ki in range(args.k):
-                temp = TEMPERATURES[ki % len(TEMPERATURES)]
-                backend.temperature = temp  # OpenAICompatBackend dataclass field
-                try:
-                    raw = backend.complete(TEACHER_SYSTEM, seed.prompt, max_tokens=700)
-                except Exception as e:  # noqa: BLE001 - log and continue
-                    print(f"[{seed.id} k{ki}] ERROR {e}")
-                    continue
-                text = strip_thinking(raw)
-                rec = {
-                    "id": f"{seed.id}-k{ki}",
-                    "seed_id": seed.id,
-                    "domain": seed.domain,
-                    "task_type": seed.task_type,
-                    "prompt": seed.prompt,
-                    "target_moves": list(seed.target_moves),
-                    "response": text,
-                    "provenance": {
-                        "source": "teacher",
-                        "backend": args.backend,
-                        "model": getattr(backend, "model", "?"),
-                        "temperature": temp,
-                        "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
-                    },
-                }
-                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-                f.flush()
-                n_done += 1
-            if (si + 1) % 5 == 0:
-                rate = n_done / (time.time() - t0)
-                print(f"{si + 1}/{len(seeds)} seeds, {n_done} candidates, {rate:.2f}/s")
 
-    print(f"wrote {n_done} candidates to {out_path}")
+    def one(seed, ki):
+        temp = TEMPERATURES[ki % len(TEMPERATURES)]
+        raw = backends_by_temp[temp].complete(TEACHER_SYSTEM, seed.prompt, max_tokens=700)
+        return {
+            "id": f"{seed.id}-k{ki}",
+            "seed_id": seed.id,
+            "domain": seed.domain,
+            "task_type": seed.task_type,
+            "prompt": seed.prompt,
+            "target_moves": list(seed.target_moves),
+            "response": strip_thinking(raw),
+            "provenance": {
+                "source": "teacher",
+                "backend": args.backend,
+                "model": getattr(backend, "model", "?"),
+                "temperature": temp,
+                "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+            },
+        }
+
+    with out_path.open("a", encoding="utf-8") as f:
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            futs = {pool.submit(one, seed, ki): (seed.id, ki) for seed, ki in tasks}
+            for fut in as_completed(futs):
+                sid, ki = futs[fut]
+                try:
+                    rec = fut.result()
+                except Exception as e:  # noqa: BLE001 - log and continue
+                    print(f"[{sid} k{ki}] ERROR {e}")
+                    continue
+                with lock:
+                    f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+                    f.flush()
+                    n_done += 1
+                    if n_done % 100 == 0:
+                        rate = n_done / (time.time() - t0)
+                        eta = (len(tasks) - n_done) / max(rate, 0.01) / 60
+                        print(f"{n_done}/{len(tasks)} done, {rate:.1f}/s, ETA {eta:.0f} min")
+
+    out_path.with_suffix(out_path.suffix + ".done").touch()
+    print(f"wrote {n_done} new candidates to {out_path} (total {len(done_ids) + n_done})")
     return 0
 
 
