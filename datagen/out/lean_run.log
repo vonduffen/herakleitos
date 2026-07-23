@@ -16,17 +16,393 @@
   TOTAL with 25% contingency             $  24.54   (cap $200)
 PREFLIGHT: GO
 === [1/7] seed expansion -> ~2,000 seeds ===
-technology: +78 scenarios
-relationships: +124 scenarios
-organizations: +62 scenarios
-nature: +39 scenarios
-mathematics: +36 scenarios
-personal_identity: +95 scenarios
-politics: +92 scenarios
-economics: +27 scenarios
-language: +43 scenarios
-art: +104 scenarios
-medicine: +107 scenarios
-history: +54 scenarios
-wrote 1041 seeds to datagen/out/lean/seeds.jsonl
 === [2/7] teacher generation: 2,000 seeds x k=4 = 8,000 candidates ===
+107 already done, 4057 to generate, workers=12
+100/4057 done, 1.2/s, ETA 57 min
+200/4057 done, 1.3/s, ETA 51 min
+300/4057 done, 1.3/s, ETA 48 min
+400/4057 done, 1.3/s, ETA 46 min
+500/4057 done, 1.4/s, ETA 43 min
+600/4057 done, 1.4/s, ETA 42 min
+700/4057 done, 1.3/s, ETA 42 min
+800/4057 done, 1.3/s, ETA 41 min
+900/4057 done, 1.3/s, ETA 40 min
+1000/4057 done, 1.3/s, ETA 39 min
+1100/4057 done, 1.3/s, ETA 38 min
+1200/4057 done, 1.3/s, ETA 36 min
+1300/4057 done, 1.3/s, ETA 36 min
+[seed-x00366 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00368 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00369 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00369 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+1400/4057 done, 1.2/s, ETA 36 min
+1500/4057 done, 1.2/s, ETA 36 min
+1600/4057 done, 1.1/s, ETA 36 min
+1700/4057 done, 1.1/s, ETA 34 min
+[seed-x00462 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00468 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00474 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00481 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00481 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00482 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+1800/4057 done, 1.1/s, ETA 34 min
+[seed-x00483 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00484 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00484 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+1900/4057 done, 1.1/s, ETA 33 min
+[seed-x00519 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00519 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00520 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00520 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00520 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00520 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00521 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00521 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00521 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00522 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00522 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00522 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00522 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00523 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00523 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00523 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00523 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00524 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00524 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00524 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00525 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00525 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00525 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00525 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00526 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00526 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00527 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00527 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00529 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00530 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00529 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00530 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00530 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00531 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00531 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00532 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00532 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00532 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00531 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00532 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00533 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00533 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00534 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00534 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00534 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00534 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00535 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00535 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00536 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00537 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00537 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00537 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00539 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00539 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00540 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00540 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00540 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00540 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00541 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00541 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00541 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00541 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00542 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00542 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00542 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00543 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00543 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00543 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00544 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00544 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00544 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00545 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00545 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00545 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00546 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00546 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00546 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00546 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00547 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00547 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00548 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00548 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00551 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00552 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00552 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00554 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00554 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00554 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00555 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00555 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00555 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00556 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00556 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00555 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00556 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00557 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2000/4057 done, 1.1/s, ETA 32 min
+[seed-x00559 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00559 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00560 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00559 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00560 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00561 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00562 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00562 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00563 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00563 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00563 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00564 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00562 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00564 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00563 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00565 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00565 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00567 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00567 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00568 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00569 k2] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00569 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00570 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00570 k1] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+[seed-x00570 k3] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2100/4057 done, 1.1/s, ETA 31 min
+2200/4057 done, 1.1/s, ETA 29 min
+2300/4057 done, 1.0/s, ETA 28 min
+2400/4057 done, 1.0/s, ETA 26 min
+2500/4057 done, 1.1/s, ETA 25 min
+2600/4057 done, 1.1/s, ETA 23 min
+2700/4057 done, 1.1/s, ETA 21 min
+2800/4057 done, 1.1/s, ETA 20 min
+2900/4057 done, 1.1/s, ETA 18 min
+3000/4057 done, 1.1/s, ETA 17 min
+3100/4057 done, 1.1/s, ETA 15 min
+3200/4057 done, 1.1/s, ETA 13 min
+3300/4057 done, 1.1/s, ETA 12 min
+3400/4057 done, 1.1/s, ETA 10 min
+3500/4057 done, 1.1/s, ETA 9 min
+3600/4057 done, 1.1/s, ETA 7 min
+3700/4057 done, 1.1/s, ETA 6 min
+[seed-x00989 k0] ERROR Client error '429 Too Many Requests' for url 'https://api.together.xyz/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+3800/4057 done, 1.1/s, ETA 4 min
+3900/4057 done, 1.1/s, ETA 2 min
+wrote 3922 new candidates to datagen/out/lean/candidates.jsonl (total 4029)
+=== [3/7] eval gate (Qwen3-235B, 3 rubric calls per candidate) ===
+100/3698 judged, 54 accepted
+200/3698 judged, 113 accepted
+300/3698 judged, 179 accepted
+400/3698 judged, 227 accepted
+500/3698 judged, 284 accepted
+600/3698 judged, 351 accepted
+700/3698 judged, 402 accepted
+800/3698 judged, 468 accepted
+900/3698 judged, 522 accepted
+1000/3698 judged, 597 accepted
+1100/3698 judged, 661 accepted
+1200/3698 judged, 744 accepted
+1300/3698 judged, 818 accepted
+1400/3698 judged, 848 accepted
+1500/3698 judged, 924 accepted
+1600/3698 judged, 984 accepted
+1700/3698 judged, 1051 accepted
+1800/3698 judged, 1127 accepted
+1900/3698 judged, 1166 accepted
+2000/3698 judged, 1207 accepted
+2100/3698 judged, 1265 accepted
+2200/3698 judged, 1329 accepted
+2300/3698 judged, 1373 accepted
+2400/3698 judged, 1440 accepted
+2500/3698 judged, 1515 accepted
+2600/3698 judged, 1574 accepted
+2700/3698 judged, 1630 accepted
+2800/3698 judged, 1696 accepted
+2900/3698 judged, 1758 accepted
+3000/3698 judged, 1815 accepted
+3100/3698 judged, 1867 accepted
+3200/3698 judged, 1927 accepted
+3300/3698 judged, 1984 accepted
+3400/3698 judged, 2039 accepted
+3500/3698 judged, 2106 accepted
+3600/3698 judged, 2167 accepted
+
+accepted 2231/4029 (55%)
+rejection reasons:
+   885  structural_below_threshold
+   456  judge_error:HTTPStatusError
+   331  too_short
+   123  consistency_incompatible
+     2  judge_error:ValueError
+     1  kitsch:decorative_fire
+=== [4/7] ablation sets: arm A (filtered) vs arm B (unfiltered, size-matched) ===
+{
+  "n_candidates": 3698,
+  "n_arm_A_filtered": 2231,
+  "n_arm_B_unfiltered": 2231,
+  "n_arm_R_rejects": 1467,
+  "arm_B_overlap_with_A": 1314,
+  "note": "Arm B is a size-matched random sample of ALL candidates (overlap with A is expected - B represents 'no gate'). Arm R (rejects-only) is the sharp negative control when acceptance is high; prediction: R < B < A.",
+  "seed": 17
+}
+=== [5/7] local LoRA training: 3 arms x 2 seeds (mlx, $0) ===
+Loading pretrained model
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 118334.60it/s]
+Loading datasets
+Training
+Trainable parameters: 0.217% (3.736M/1720.575M)
+Starting training..., iters: 600
+Calculating loss...:   0%|          | 0/25 [00:00<?, ?it/s]Calculating loss...:   4%|▍         | 1/25 [00:00<00:11,  2.16it/s]Calculating loss...:   8%|▊         | 2/25 [00:00<00:09,  2.48it/s]Calculating loss...:  12%|█▏        | 3/25 [00:01<00:08,  2.54it/s]Calculating loss...:  16%|█▌        | 4/25 [00:01<00:08,  2.58it/s]Calculating loss...:  20%|██        | 5/25 [00:01<00:07,  2.63it/s]Calculating loss...:  24%|██▍       | 6/25 [00:02<00:07,  2.66it/s]Calculating loss...:  28%|██▊       | 7/25 [00:02<00:06,  2.79it/s]Calculating loss...:  32%|███▏      | 8/25 [00:02<00:05,  2.87it/s]Calculating loss...:  36%|███▌      | 9/25 [00:03<00:05,  2.94it/s]Calculating loss...:  40%|████      | 10/25 [00:03<00:05,  2.86it/s]Calculating loss...:  44%|████▍     | 11/25 [00:03<00:04,  2.93it/s]Calculating loss...:  48%|████▊     | 12/25 [00:04<00:04,  2.85it/s]Calculating loss...:  52%|█████▏    | 13/25 [00:04<00:04,  2.82it/s]Calculating loss...:  56%|█████▌    | 14/25 [00:05<00:03,  2.87it/s]Calculating loss...:  60%|██████    | 15/25 [00:05<00:03,  2.93it/s]Calculating loss...:  64%|██████▍   | 16/25 [00:05<00:03,  2.99it/s]Calculating loss...:  68%|██████▊   | 17/25 [00:06<00:02,  2.87it/s]Calculating loss...:  72%|███████▏  | 18/25 [00:06<00:02,  2.91it/s]Calculating loss...:  76%|███████▌  | 19/25 [00:06<00:02,  2.94it/s]Calculating loss...:  80%|████████  | 20/25 [00:07<00:01,  2.97it/s]Calculating loss...:  84%|████████▍ | 21/25 [00:07<00:01,  2.87it/s]Calculating loss...:  88%|████████▊ | 22/25 [00:07<00:01,  2.81it/s]Calculating loss...:  92%|█████████▏| 23/25 [00:08<00:00,  2.90it/s]Calculating loss...:  96%|█████████▌| 24/25 [00:08<00:00,  2.83it/s]Calculating loss...: 100%|██████████| 25/25 [00:08<00:00,  2.69it/s]Calculating loss...: 100%|██████████| 25/25 [00:08<00:00,  2.80it/s]
+Iter 1: Val loss 5.889, Val took 8.932s
+Iter 100: Train loss 2.161, Learning Rate 1.000e-05, It/sec 1.426, Tokens/sec 603.269, Trained Tokens 42303, Peak mem 3.174 GB
+Iter 100: Saved adapter weights to training/adapters/lean_arm_A_filtered_s17/adapters.safetensors and training/adapters/lean_arm_A_filtered_s17/0000100_adapters.safetensors.
+Calculating loss...:   0%|          | 0/25 [00:00<?, ?it/s]Calculating loss...:   4%|▍         | 1/25 [00:00<00:09,  2.49it/s]Calculating loss...:   8%|▊         | 2/25 [00:00<00:08,  2.59it/s]Calculating loss...:  12%|█▏        | 3/25 [00:01<00:07,  2.84it/s]Calculating loss...:  16%|█▌        | 4/25 [00:01<00:08,  2.62it/s]Calculating loss...:  20%|██        | 5/25 [00:01<00:07,  2.74it/s]Calculating loss...:  24%|██▍       | 6/25 [00:02<00:07,  2.60it/s]Calculating loss...:  28%|██▊       | 7/25 [00:02<00:06,  2.85it/s]Calculating loss...:  32%|███▏      | 8/25 [00:02<00:05,  2.91it/s]Calculating loss...:  36%|███▌      | 9/25 [00:03<00:05,  2.95it/s]Calculating loss...:  40%|████      | 10/25 [00:03<00:05,  2.85it/s]Calculating loss...:  44%|████▍     | 11/25 [00:03<00:04,  3.00it/s]Calculating loss...:  48%|████▊     | 12/25 [00:04<00:04,  3.07it/s]Calculating loss...:  52%|█████▏    | 13/25 [00:04<00:04,  2.98it/s]Calculating loss...:  56%|█████▌    | 14/25 [00:04<00:03,  2.85it/s]Calculating loss...:  60%|██████    | 15/25 [00:05<00:03,  3.04it/s]Calculating loss...:  64%|██████▍   | 16/25 [00:05<00:03,  2.81it/s]Calculating loss...:  68%|██████▊   | 17/25 [00:05<00:02,  2.86it/s]Calculating loss...:  72%|███████▏  | 18/25 [00:06<00:02,  2.81it/s]Calculating loss...:  76%|███████▌  | 19/25 [00:06<00:02,  2.88it/s]Calculating loss...:  80%|████████  | 20/25 [00:07<00:01,  2.87it/s]Calculating loss...:  84%|████████▍ | 21/25 [00:07<00:01,  2.93it/s]Calculating loss...:  88%|████████▊ | 22/25 [00:07<00:01,  2.84it/s]Calculating loss...:  92%|█████████▏| 23/25 [00:08<00:00,  2.89it/s]Calculating loss...:  96%|█████████▌| 24/25 [00:08<00:00,  2.83it/s]Calculating loss...: 100%|██████████| 25/25 [00:08<00:00,  2.77it/s]Calculating loss...: 100%|██████████| 25/25 [00:08<00:00,  2.84it/s]
+Iter 200: Val loss 1.536, Val took 8.961s
+Iter 200: Train loss 1.548, Learning Rate 1.000e-05, It/sec 0.975, Tokens/sec 408.189, Trained Tokens 84155, Peak mem 3.174 GB
+Iter 200: Saved adapter weights to training/adapters/lean_arm_A_filtered_s17/adapters.safetensors and training/adapters/lean_arm_A_filtered_s17/0000200_adapters.safetensors.
+Iter 300: Train loss 1.498, Learning Rate 1.000e-05, It/sec 1.287, Tokens/sec 540.658, Trained Tokens 126149, Peak mem 3.189 GB
+Iter 300: Saved adapter weights to training/adapters/lean_arm_A_filtered_s17/adapters.safetensors and training/adapters/lean_arm_A_filtered_s17/0000300_adapters.safetensors.
+Calculating loss...:   0%|          | 0/25 [00:00<?, ?it/s]Calculating loss...:   4%|▍         | 1/25 [00:00<00:17,  1.36it/s]Calculating loss...:   8%|▊         | 2/25 [00:01<00:16,  1.41it/s]Calculating loss...:  12%|█▏        | 3/25 [00:02<00:14,  1.47it/s]Calculating loss...:  16%|█▌        | 4/25 [00:02<00:14,  1.48it/s]Calculating loss...:  20%|██        | 5/25 [00:03<00:13,  1.51it/s]Calculating loss...:  24%|██▍       | 6/25 [00:04<00:12,  1.48it/s]Calculating loss...:  28%|██▊       | 7/25 [00:04<00:11,  1.53it/s]Calculating loss...:  32%|███▏      | 8/25 [00:05<00:12,  1.39it/s]Calculating loss...:  36%|███▌      | 9/25 [00:06<00:11,  1.37it/s]Calculating loss...:  40%|████      | 10/25 [00:06<00:10,  1.43it/s]Calculating loss...:  44%|████▍     | 11/25 [00:07<00:10,  1.37it/s]Calculating loss...:  48%|████▊     | 12/25 [00:08<00:09,  1.42it/s]Calculating loss...:  52%|█████▏    | 13/25 [00:09<00:08,  1.39it/s]Calculating loss...:  56%|█████▌    | 14/25 [00:09<00:07,  1.45it/s]Calculating loss...:  60%|██████    | 15/25 [00:10<00:07,  1.31it/s]Calculating loss...:  64%|██████▍   | 16/25 [00:11<00:07,  1.13it/s]Calculating loss...:  68%|██████▊   | 17/25 [00:12<00:07,  1.08it/s]Calculating loss...:  72%|███████▏  | 18/25 [00:13<00:06,  1.09it/s]Calculating loss...:  76%|███████▌  | 19/25 [00:14<00:05,  1.17it/s]Calculating loss...:  80%|████████  | 20/25 [00:15<00:03,  1.27it/s]Calculating loss...:  84%|████████▍ | 21/25 [00:15<00:02,  1.36it/s]Calculating loss...:  88%|████████▊ | 22/25 [00:16<00:02,  1.21it/s]Calculating loss...:  92%|█████████▏| 23/25 [00:17<00:01,  1.18it/s]Calculating loss...:  96%|█████████▌| 24/25 [00:18<00:00,  1.16it/s]Calculating loss...: 100%|██████████| 25/25 [00:19<00:00,  1.16it/s]Calculating loss...: 100%|██████████| 25/25 [00:19<00:00,  1.29it/s]
+Iter 400: Val loss 1.493, Val took 19.469s
+Iter 400: Train loss 1.516, Learning Rate 1.000e-05, It/sec 1.087, Tokens/sec 451.902, Trained Tokens 167737, Peak mem 3.189 GB
+/Users/m4/miniconda3/lib/python3.13/multiprocessing/resource_tracker.py:277: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-15830-q60n64qi'}
+  warnings.warn(

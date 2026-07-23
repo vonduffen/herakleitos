@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 import tomllib
 from collections.abc import Callable
 from dataclasses import dataclass
@@ -55,14 +56,28 @@ class OpenAICompatBackend:
         }
         if self.extra_body:
             payload.update(self.extra_body)
-        resp = httpx.post(
-            f"{self.base_url.rstrip('/')}/chat/completions",
-            headers={"Authorization": f"Bearer {key}"},
-            json=payload,
-            timeout=120,
-        )
-        resp.raise_for_status()
-        return resp.json()["choices"][0]["message"]["content"]
+        # Retry transient HTTP failures (429 rate limits, 5xx) with backoff -
+        # at 12 concurrent workers these are routine, not exceptional.
+        last: Exception | None = None
+        for wait in (0, 2, 5, 12):
+            if wait:
+                time.sleep(wait)
+            try:
+                resp = httpx.post(
+                    f"{self.base_url.rstrip('/')}/chat/completions",
+                    headers={"Authorization": f"Bearer {key}"},
+                    json=payload,
+                    timeout=120,
+                )
+                resp.raise_for_status()
+                return resp.json()["choices"][0]["message"]["content"]
+            except httpx.HTTPStatusError as e:
+                last = e
+                if e.response.status_code not in (429, 500, 502, 503, 529):
+                    raise
+            except httpx.TransportError as e:
+                last = e
+        raise last  # type: ignore[misc]
 
 
 @dataclass

@@ -1,0 +1,12 @@
+{
+  "total": 4029,
+  "accepted": 2231,
+  "reasons": {
+    "too_short": 331,
+    "structural_below_threshold": 885,
+    "consistency_incompatible": 123,
+    "judge_error:HTTPStatusError": 456,
+    "judge_error:ValueError": 2,
+    "kitsch:decorative_fire": 1
+  }
+}

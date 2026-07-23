@@ -77,6 +77,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--out", required=True)
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--workers", type=int, default=1, help="concurrent candidates (1 for local)")
+    ap.add_argument("--resume", action="store_true", help="keep prior accepted; judge the rest")
     args = ap.parse_args(argv)
 
     _different_family_or_die(args.teacher_backend, args.backend)
@@ -98,9 +99,21 @@ def main(argv: list[str] | None = None) -> int:
     accepted_shingles: list[set[str]] = []
     lock = threading.Lock()
 
+    prior_ids: set[str] = set()
+    if args.resume and Path(args.out).exists():
+        for line in Path(args.out).read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                rec = json.loads(line)
+                prior_ids.add(rec["id"])
+                accepted.append(rec)
+                accepted_shingles.append(shingles(rec["response"]))
+        print(f"resume: {len(prior_ids)} previously accepted kept")
+
     # Cheap, order-dependent screens run sequentially first (dedupe needs order).
     to_judge: list[dict] = []
     for c in candidates:
+        if c["id"] in prior_ids:
+            continue
         text = c["response"].strip()
         if len(text.split()) < 15:
             reasons["too_short"] += 1

@@ -1,0 +1,9 @@
+{
+  "n_candidates": 3698,
+  "n_arm_A_filtered": 2231,
+  "n_arm_B_unfiltered": 2231,
+  "n_arm_R_rejects": 1467,
+  "arm_B_overlap_with_A": 1314,
+  "note": "Arm B is a size-matched random sample of ALL candidates (overlap with A is expected - B represents 'no gate'). Arm R (rejects-only) is the sharp negative control when acceptance is high; prediction: R < B < A.",
+  "seed": 17
+}
