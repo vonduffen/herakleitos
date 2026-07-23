@@ -38,23 +38,27 @@ class OpenAICompatBackend:
     model: str
     api_key_env: str
     temperature: float = 0.0
+    extra_body: dict | None = None  # provider passthrough (e.g. disable thinking)
 
     def complete(self, system: str, user: str, *, max_tokens: int = 1024) -> str:
         key = os.environ.get(self.api_key_env, "")
         if not key:
             raise RuntimeError(f"backend {self.name}: set {self.api_key_env}")
+        payload = {
+            "model": self.model,
+            "temperature": self.temperature,
+            "max_tokens": max_tokens,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+        }
+        if self.extra_body:
+            payload.update(self.extra_body)
         resp = httpx.post(
             f"{self.base_url.rstrip('/')}/chat/completions",
             headers={"Authorization": f"Bearer {key}"},
-            json={
-                "model": self.model,
-                "temperature": self.temperature,
-                "max_tokens": max_tokens,
-                "messages": [
-                    {"role": "system", "content": system},
-                    {"role": "user", "content": user},
-                ],
-            },
+            json=payload,
             timeout=120,
         )
         resp.raise_for_status()
@@ -148,6 +152,7 @@ def load_backend(name: str, config_path: Path = CONFIG_PATH) -> Backend:
             base_url=b["base_url"],
             model=b["model"],
             api_key_env=b.get("api_key_env", "OPENAI_API_KEY"),
+            extra_body=b.get("extra_body"),
         )
     if kind == "mock":
         return MockBackend(name=name)

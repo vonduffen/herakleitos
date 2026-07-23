@@ -25,9 +25,11 @@ CHECKS = [
 
 # Lean-tier volumes (mirrors docs/herakleitos_budget.xlsx, Lean column)
 EST = {
-    "seed expansion (~120 calls)": 120 * (900 * 0.60 + 900 * 1.70) / 1e6,
-    "teacher generation (8k)": 8000 * (300 * 0.60 + 400 * 1.70) / 1e6,
-    "gate judging (24k calls)": 24000 * (700 * 0.20 + 150 * 0.60) / 1e6,
+    # Prices re-verified 2026-07-23: DeepSeek-V4-Pro $1.74/$3.48 per M (Together);
+    # Judge Qwen3.5-9B $0.17/$0.25 (Together serverless, 2026-07-23).
+    "seed expansion (~120 calls)": 120 * (900 * 1.74 + 900 * 3.48) / 1e6,
+    "teacher generation (8k)": 8000 * (300 * 1.74 + 400 * 3.48) / 1e6,
+    "gate judging (24k calls)": 24000 * (700 * 0.17 + 150 * 0.25) / 1e6,
     "frontier calibration (1.2k calls)": 1200 * (1500 * 12.0 + 200 * 50.0) / 1e6,
     "frontier report cards (400 calls)": 400 * (1500 * 12.0 + 200 * 50.0) / 1e6,
 }
